@@ -85,8 +85,8 @@ const contact = () => (
         <OfficeCard
           province="Punjab"
           country="Pakistan"
-          street="Mohsin Town"
-          houseNo="House # 2"
+          street="Office Travelia Planet"
+          houseNo="Al-Kareem Center, Pull Daat"
           city="Dera Ghazi Khan"
           email="traveliaplanet@gmail.com"
           phone="+92 321 6483355"
