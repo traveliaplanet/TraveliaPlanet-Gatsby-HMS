@@ -16,9 +16,9 @@ function Questions() {
   };
   return (
     <Container className="py-16">
-      <section id="#questions" className="flex justify-between">
+      <section id="#questions" className="justify-between md:flex">
         <StaticImage
-          className="mr-10 hidden rounded-xl object-cover md:h-[600px] lg:block"
+          className="mr-10 hidden rounded-xl object-cover md:block md:h-[600px]"
           src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"
           placeholder="blurred"
           alt="What we Offer"
@@ -32,7 +32,7 @@ function Questions() {
             Should you have any other questions, feel free to reach out via the contact form below.
           </p>
           <StaticImage
-            className="rounded-xl object-cover md:h-[600px] lg:hidden"
+            className="rounded-xl object-cover md:hidden md:h-[600px]"
             src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"
             placeholder="blurred"
             alt="What we Offer"
