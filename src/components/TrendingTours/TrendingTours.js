@@ -1,0 +1,89 @@
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+// 3rd Parrty
+import Slider from 'react-slick';
+// Components
+import { Container, SlideLeft, SlideRight, SliderCard } from '../UI';
+
+function TrendingTours({ destinations }) {
+  const [sliderRef, setSliderRef] = useState(null);
+
+  const settings = {
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 1,
+          dots: true
+        }
+      },
+
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          dots: true
+        }
+      }
+    ]
+  };
+
+  return (
+    <Container>
+      <section id="trendingTours" className="md:pb-16">
+        <div className="md:grid md:grid-cols-2">
+          <div className="mx-auto text-justify lg:w-[500px]">
+            <div className="py-16 md:flex md:justify-between">
+              <h2 className="text-center text-4xl font-extrabold text-gray-700 md:text-left md:text-5xl">
+                Trending Tours
+              </h2>
+              <div className="hidden justify-end md:flex">
+                <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
+                <SlideRight onClick={sliderRef?.slickNext} />
+              </div>
+            </div>
+            <p className="text-xl font-medium text-gray-500 md:leading-relaxed">
+              Pakistan is so geographically varied that every adventure travel lover in the world
+              would love to take Pakistan tour at least once in their lifetime. From lush green
+              valleys to Cold deserts, unexplored beaches to the second highest Mountain in the
+              world, from Gilgit Baltistan of North to Ziarat of Baluchistan. Pakistan is blessed
+              with natural landscapes; each one more beautiful than the other.
+            </p>
+            <div className="flex justify-end py-8 md:hidden">
+              <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
+              <SlideRight onClick={sliderRef?.slickNext} />
+            </div>
+          </div>
+          <div className="mb-10">
+            <Slider ref={setSliderRef} {...settings}>
+              {destinations.map((trip, index) => (
+                <div key={index}>
+                  <SliderCard
+                    heading={trip.Heading}
+                    rating={trip.Rating}
+                    image={trip?.Thumbnail?.localFile?.childImageSharp?.gatsbyImageData}
+                    shortDescription={trip.shortDescription}
+                    location={trip.Location}
+                    price={trip.Price}
+                    slug={trip.slug}
+                    duration={trip.Duration}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </section>
+    </Container>
+  );
+}
+
+TrendingTours.propTypes = {
+  destinations: PropTypes.object
+};
+
+export default TrendingTours;
