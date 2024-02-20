@@ -21,13 +21,16 @@ const contact = () => (
           </p>
           <form
             className="my-6 grid w-full cursor-pointer gap-6 text-gray-500 md:w-2/3"
-            data-netlify="true"
             name="contact"
             method="POST"
+            data-netlify="true"
+            action="/thank-you"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <input
               className="cursor-pointer rounded border-b-2 p-2 font-semibold outline-none transition duration-300 hover:border-indigo-600 focus:border-none focus:outline-indigo-600"
               name="email"
+              id="emal"
               required
               type="email"
               placeholder="Your Email Address (required)"
@@ -35,11 +38,13 @@ const contact = () => (
             <input
               className="cursor-pointer rounded border-b-2 p-2 font-semibold outline-none transition duration-300 hover:border-indigo-600 focus:border-none focus:outline-indigo-600"
               name="name"
+              id="name"
               placeholder="Full Name"
             />
             <input
               className="cursor-pointer appearance-none rounded border-b-2 p-2 font-semibold outline-none transition duration-300 hover:border-indigo-600 focus:border-none focus:outline-indigo-600"
               name="Phone Number"
+              id="phone"
               type="number"
               required
               placeholder="Phone Number (required)"
@@ -47,16 +52,19 @@ const contact = () => (
             <input
               className="cursor-pointer rounded border-b-2 p-2 font-semibold outline-none transition duration-300 hover:border-indigo-600 focus:border-none focus:outline-indigo-600"
               name="subject"
+              id="subject"
               placeholder="Subject"
             />
             <input
               className="cursor-pointer rounded border-b-2 p-2 font-semibold outline-none transition duration-300 hover:border-indigo-600 focus:border-none focus:outline-indigo-600"
               name="country"
+              id="country"
               placeholder="Country"
             />
             <textarea
               className="cursor-pointer resize-none rounded border-b-2 p-2 font-semibold outline-none transition duration-300 hover:border-indigo-600 focus:border-none focus:outline-indigo-600"
               name="Message"
+              id="message"
               placeholder="Your Message Here"
               cols="5"
               rows="5"
@@ -64,7 +72,7 @@ const contact = () => (
               Invitation Letter Required for Visa Processing. Information Required for Pakistan
               Tour.
             </textarea>
-            <PrimaryButton text="Send Message" />
+            <button type="submit">SEND</button>
             <WhatsappButton text="Whatsapp Us" />
           </form>
         </div>
