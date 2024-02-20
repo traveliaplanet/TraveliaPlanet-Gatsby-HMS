@@ -78,7 +78,7 @@ const contact = () => (
           <h3 className="mb-4 text-3xl font-extrabold text-gray-700 md:text-5xl">Our Office</h3>
           <p className="text-left text-lg font-semibold text-gray-500 md:text-xl">
             Please contact Travelia Planet Administrative Office or Travel Support at
-            <span className="text-indigo-600"> traveliaplanet@gmail.com</span> if you encounter
+            <span className="text-indigo-600"> traveliaplanet@gmail.com</span> if you encounter any
             difficulty in accessing the travel package or if you have travel related questions.
           </p>
         </div>
