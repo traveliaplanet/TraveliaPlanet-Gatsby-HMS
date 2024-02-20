@@ -3,23 +3,19 @@ import { graphql, useStaticQuery } from 'gatsby';
 const useTestimonialData = () => {
   const data = useStaticQuery(graphql`
     query {
-      allStrapiTestimonial {
+      allDatoCmsTestimonial {
         nodes {
           name
           designation
           quote
           image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
+            gatsbyImageData
           }
         }
       }
     }
   `);
-  return data.allStrapiTestimonial.nodes;
+  return data.allDatoCmsTestimonial.nodes;
 };
 
 export default useTestimonialData;

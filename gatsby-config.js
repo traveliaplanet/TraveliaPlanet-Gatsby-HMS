@@ -21,12 +21,12 @@ const importAlias = {
   components: path.resolve(__dirname, 'src/components')
 };
 
-const strapiConfig = {
-  apiURL: `http://0.0.0.0:1337`,
-  accessToken: `dedf0b90b36f1a0e0f23e1aaac7b78ba8d914bcc59a1608e47735131022d97058753adf92ff32a440e10f9c0cd2d473f84ac356e00ac4e889f3c9bb3a5c69ec2526d05c746def25f83ba7f5273876b4be615d98754b6e08a3d1125daa4e4bfcfbfd6bfd66fa8ad99b0af7a2e02c42802e4547257daed36522d25a9faee5f9c82`,
-  collectionTypes: [`destination`, `testimonial`],
-  singleTypes: []
-};
+// const strapiConfig = {
+//   apiURL: `http://0.0.0.0:1337`,
+//   accessToken: `dedf0b90b36f1a0e0f23e1aaac7b78ba8d914bcc59a1608e47735131022d97058753adf92ff32a440e10f9c0cd2d473f84ac356e00ac4e889f3c9bb3a5c69ec2526d05c746def25f83ba7f5273876b4be615d98754b6e08a3d1125daa4e4bfcfbfd6bfd66fa8ad99b0af7a2e02c42802e4547257daed36522d25a9faee5f9c82`,
+//   collectionTypes: [`destination`, `testimonial`],
+//   singleTypes: []
+// };
 
 module.exports = {
   siteMetadata: {
@@ -38,10 +38,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
-    {
-      resolve: `gatsby-source-strapi`,
-      options: strapiConfig
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: strapiConfig
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -128,6 +128,33 @@ module.exports = {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         resolveSiteUrl: () => 'https://traveliaplanet.com'
+      }
+    },
+
+    // DATO CMS
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        // You can find your read-only API token under the Settings > API tokens
+        // section of your administrative area. Make sure to grant both CDA and CMA permissions.
+        apiToken: `2725199cb5ba9e7c99618d011ffa78`,
+
+        // The project environment to read from. Defaults to the primary environment:
+        environment: `main`,
+
+        // If you are working on development/staging environment, you might want to
+        // preview the latest version of records instead of the published one:
+        previewMode: false,
+
+        // Disable automatic reloading of content when some change occurs on DatoCMS:
+        disableLiveReload: false,
+
+        // Custom API base URL (you probably don't need this!)
+        // apiUrl: 'https://site-api.datocms.com',
+
+        // Limits page size and can be used to avoid build timeouts.
+        // Default is 500 (also the maximum)
+        pageSize: 500
       }
     }
   ]

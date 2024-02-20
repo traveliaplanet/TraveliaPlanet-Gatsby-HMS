@@ -8,12 +8,11 @@ import Layout from 'components/Layout';
 import AllDestinations from 'components/AllDestinations';
 import { Container } from 'components/UI';
 
-const destinations = ({ data }) => {
-  console.log(data);
-  const internationalDestinations = data.allStrapiDestination.nodes.filter(
-    (i) => i.isInternational
+function destinations({ data }) {
+  const internationalDestinations = data.allDatoCmsDestination.nodes.filter(
+    (i) => i.isinternational
   );
-  const pakistanDestinations = data.allStrapiDestination.nodes.filter((i) => i.isPakistani);
+  const pakistanDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.ispakistani);
   return (
     <Layout>
       <Container>
@@ -51,29 +50,25 @@ const destinations = ({ data }) => {
       </Container>
     </Layout>
   );
-};
+}
 export const query = graphql`
   query {
-    allStrapiDestination {
+    allDatoCmsDestination {
       nodes {
-        Thumbnail {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(height: 300, width: 400)
-            }
-          }
-        }
-        Heading
-        Location
-        Price
-        Rating
+        duration
+        heading
+        isinternational
+        ispakistani
+        ispopular
+        istrending
+        location
+        rating
+        price
+        shortdescription
         slug
-        shortDescription
-        isPopular
-        isTrending
-        Duration
-        isInternational
-        isPakistani
+        thumbnail {
+          gatsbyImageData(height: 300, width: 400)
+        }
       }
     }
   }

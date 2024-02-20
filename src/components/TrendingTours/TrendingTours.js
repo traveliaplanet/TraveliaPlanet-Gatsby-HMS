@@ -63,14 +63,14 @@ function TrendingTours({ destinations }) {
               {destinations.map((trip, index) => (
                 <div key={index}>
                   <SliderCard
-                    heading={trip.Heading}
-                    rating={trip.Rating}
-                    image={trip?.Thumbnail?.localFile?.childImageSharp?.gatsbyImageData}
-                    shortDescription={trip.shortDescription}
-                    location={trip.Location}
-                    price={trip.Price}
+                    heading={trip.heading}
+                    rating={trip.rating}
+                    image={trip?.thumbnail?.gatsbyImageData}
+                    shortDescription={trip.shortdescription}
+                    location={trip.location}
+                    price={trip.price}
                     slug={trip.slug}
-                    duration={trip.Duration}
+                    duration={trip.duration}
                   />
                 </div>
               ))}

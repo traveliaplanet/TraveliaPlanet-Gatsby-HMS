@@ -75,7 +75,7 @@ function Testimonials() {
           {useTestimonialData().map((testimonial, index) => (
             <div key={index} className="relative rounded border-2 object-none">
               <GatsbyImage
-                image={testimonial.image.localFile.childImageSharp.gatsbyImageData}
+                image={testimonial.image.gatsbyImageData}
                 className="h-96 w-full object-cover md:h-[650px]"
                 alt="testimonial"
               />

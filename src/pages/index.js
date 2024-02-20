@@ -22,8 +22,8 @@ function IndexPage({ data }) {
       image: `https://res.cloudinary.com/hms-software/image/upload/v1708440997/khunjerab_dh4uhn.jpg`
     }
   ];
-  const popularDestinations = data.allStrapiDestination.nodes.filter((i) => i.isPopular);
-  const trendingDestinations = data.allStrapiDestination.nodes.filter((i) => i.isTrending);
+  const popularDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.ispopular);
+  const trendingDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.istrending);
 
   return (
     <Layout>
@@ -57,25 +57,22 @@ export function Head() {
 
 export const query = graphql`
   query {
-    allStrapiDestination {
+    allDatoCmsDestination {
       nodes {
-        Thumbnail {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(height: 300, width: 400)
-            }
-          }
-        }
-        Heading
-        Location
-        Price
-        Rating
+        duration
+        heading
+        isinternational
+        ispakistani
+        ispopular
+        istrending
+        location
+        rating
+        price
+        shortdescription
         slug
-        shortDescription
-        isPopular
-        isTrending
-        Duration
-        isInternational
+        thumbnail {
+          gatsbyImageData(height: 300, width: 400)
+        }
       }
     }
   }

@@ -31,10 +31,10 @@ function SliderCard({ heading, shortDescription, rating, location, price, image,
             <div className="flex items-center">
               <AiOutlineDollar className="rounded-full bg-gray-700 p-1.5 text-3xl text-white" />
               {/* <p className="ml-2 font-bold text-gray-800">PKR {price}</p> */}
-              <p className="ml-2 font-bold text-gray-800">USD 100.00</p>
+              <p className="ml-2 font-bold text-gray-800">PKR {price}</p>
             </div>
           </div>
-          <p className="line-clamp-4">{shortDescription}</p>
+          <p className="line-clamp-5">{shortDescription}</p>
         </div>
         <div className="flex items-center font-bold text-gray-600">
           <AiOutlineClockCircle className="mx-2 text-xl" />

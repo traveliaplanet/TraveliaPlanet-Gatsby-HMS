@@ -31,8 +31,7 @@ function AboutDestination({ Location, Duration, Price, Heading, shortDescription
             <dt className=" font-semibold">Price</dt>
             <dd className="mb-2 flex items-center text-lg font-normal">
               <AiOutlineDollar className="mr-2" />
-              {/* PKR {Price} */}
-              USD 100.00
+              PKR {Price}
             </dd>
             <dt className="font-semibold">Rating</dt>
             <dd className="mb-2 flex items-center text-lg font-normal">
