@@ -18,7 +18,7 @@ function Questions() {
     <Container className="py-16">
       <section id="#questions" className="justify-between md:flex">
         <StaticImage
-          className="mr-10 hidden rounded-xl object-cover md:block md:h-[600px]"
+          className="mb-4 rounded-xl object-cover md:mb-0 md:mr-10 md:h-[600px]"
           src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"
           placeholder="blurred"
           alt="What we Offer"
@@ -31,12 +31,12 @@ function Questions() {
             Here are some frequently asked questions about our Tours from our loving customers.
             Should you have any other questions, feel free to reach out via the contact form below.
           </p>
-          <StaticImage
+          {/* <StaticImage
             className="rounded-xl object-cover md:hidden md:h-[600px]"
             src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"
             placeholder="blurred"
             alt="What we Offer"
-          />
+          /> */}
           <dl className="grid w-full gap-2">
             {QuestionsData.map((faq, index) => (
               <button
