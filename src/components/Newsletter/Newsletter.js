@@ -18,10 +18,9 @@ function Newsletter() {
         <form
           className="grid w-full place-items-center gap-4 md:flex md:w-1/3 md:gap-0"
           name="Newsletter"
-          id="newsletter"
           method="POST"
           data-netlify="true"
-          action="/thank-you"
+          action="/thank-you/"
         >
           <input type="hidden" name="form-name" value="newsletter" />
           <input
@@ -32,11 +31,7 @@ function Newsletter() {
             type="email"
             className="w-full rounded-l-md border-r-0 bg-slate-700 py-4 pl-4 text-lg font-bold outline-none focus:border focus:border-indigo-600"
           />
-          <PrimaryButton
-            text="Subscribe Now "
-            type="submit"
-            className="md:rounded-l-0  bg-green-500 md:w-2/3 md:rounded-t-none md:rounded-b-none md:rounded-r-md"
-          />
+          <PrimaryButton type="submit" text="Subscribe Now" />
         </form>
       </div>
     </Container>
