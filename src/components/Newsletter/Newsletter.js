@@ -31,7 +31,12 @@ function Newsletter() {
             type="email"
             className="w-full rounded-l-md border-r-0 bg-slate-700 py-4 pl-4 text-lg font-bold outline-none focus:border focus:border-indigo-600"
           />
-          <PrimaryButton type="submit" text="Subscribe Now" />
+          <button
+            type="submit"
+            className="w-full rounded bg-indigo-600 p-4 text-center text-lg font-semibold text-gray-100 transition duration-300 hover:bg-indigo-500"
+          >
+            Subscribe Now
+          </button>
         </form>
       </div>
     </Container>

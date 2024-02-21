@@ -72,7 +72,12 @@ const contact = () => (
               Invitation Letter Required for Visa Processing. Information Required for Pakistan
               Tour.
             </textarea>
-            <PrimaryButton type="submit" text="Send Message" />
+            <button
+              type="submit"
+              className="w-full rounded bg-indigo-600 p-4 text-center text-lg font-semibold text-gray-100 transition duration-300 hover:bg-indigo-500"
+            >
+              Send Message
+            </button>
             <WhatsappButton text="Whatsapp Us" />
           </form>
         </div>
