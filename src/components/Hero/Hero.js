@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import React from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 // Components
-import { Container, PrimaryButton, SecondaryButton } from '../UI';
+import { Container, PrimaryButton, SecondaryButton } from "../UI";
 
 function Hero() {
   return (
@@ -11,11 +11,13 @@ function Hero() {
       <Container>
         <div className="grid place-items-center pt-20 lg:place-items-start">
           <h1 className="mb-10 text-4xl font-bold text-gray-700 md:text-6xl">
-            Find Perfect Destinations <span className="text-indigo-600">anywhere you go.</span>
+            Find Perfect Destinations{" "}
+            <span className="text-indigo-600">anywhere you go.</span>
           </h1>
           <p className="mb-10 text-lg leading-8 tracking-wide text-gray-600 md:max-w-lg md:text-xl">
-            Travelia Planet offers best North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu
-            Tours, Gilgit Baltistan Tours and many more with attractive discounts.
+            Travelia Planet offers best North Tours, Kashmir Tours, Naran &
+            Kaghan Tours, Skardu Tours, Gilgit Baltistan Tours and many more
+            with attractive discounts.
           </p>
           <div className="mb-16">
             <div className="grid-flow-col grid-cols-2 gap-x-4 md:grid md:w-[400px]">

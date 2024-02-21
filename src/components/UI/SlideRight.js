@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { AiFillRightCircle } from 'react-icons/ai';
+import React from "react";
+import PropTypes from "prop-types";
+import { AiFillRightCircle } from "react-icons/ai";
 
 function SlideRight({ className, onClick }) {
   return (
@@ -13,7 +13,7 @@ function SlideRight({ className, onClick }) {
 
 SlideRight.propTypes = {
   className: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 export default SlideRight;

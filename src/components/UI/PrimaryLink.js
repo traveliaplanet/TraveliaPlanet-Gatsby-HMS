@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "gatsby";
 
 function PrimaryLink({ route, name, className, component, target }) {
   return (
@@ -23,5 +23,5 @@ PrimaryLink.propTypes = {
   name: PropTypes.string,
   className: PropTypes.string,
   target: PropTypes.string,
-  component: PropTypes.object
+  component: PropTypes.object,
 };

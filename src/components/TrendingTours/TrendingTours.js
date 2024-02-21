@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import PropTypes from "prop-types";
+import React, { useState } from "react";
 // 3rd Parrty
-import Slider from 'react-slick';
+import Slider from "react-slick";
 // Components
-import { Container, SlideLeft, SlideRight, SliderCard } from '../UI';
+import { Container, SlideLeft, SlideRight, SliderCard } from "../UI";
 
 function TrendingTours({ destinations }) {
   const [sliderRef, setSliderRef] = useState(null);
@@ -18,18 +18,18 @@ function TrendingTours({ destinations }) {
         breakpoint: 1280,
         settings: {
           slidesToShow: 1,
-          dots: true
-        }
+          dots: true,
+        },
       },
 
       {
         breakpoint: 900,
         settings: {
           slidesToShow: 1,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
   };
 
   return (
@@ -47,11 +47,13 @@ function TrendingTours({ destinations }) {
               </div>
             </div>
             <p className="text-xl font-medium text-gray-500 md:leading-relaxed">
-              Pakistan is so geographically varied that every adventure travel lover in the world
-              would love to take Pakistan tour at least once in their lifetime. From lush green
-              valleys to Cold deserts, unexplored beaches to the second highest Mountain in the
-              world, from Gilgit Baltistan of North to Ziarat of Baluchistan. Pakistan is blessed
-              with natural landscapes; each one more beautiful than the other.
+              Pakistan is so geographically varied that every adventure travel
+              lover in the world would love to take Pakistan tour at least once
+              in their lifetime. From lush green valleys to Cold deserts,
+              unexplored beaches to the second highest Mountain in the world,
+              from Gilgit Baltistan of North to Ziarat of Baluchistan. Pakistan
+              is blessed with natural landscapes; each one more beautiful than
+              the other.
             </p>
             <div className="flex justify-end py-8 md:hidden">
               <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
@@ -83,7 +85,7 @@ function TrendingTours({ destinations }) {
 }
 
 TrendingTours.propTypes = {
-  destinations: PropTypes.object
+  destinations: PropTypes.object,
 };
 
 export default TrendingTours;

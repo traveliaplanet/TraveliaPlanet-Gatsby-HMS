@@ -1,17 +1,19 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
 // Components
-import { Container, ServiceCard } from '../UI';
+import { Container, ServiceCard } from "../UI";
 
 // hooks
-import { ServiceLinks } from '../../hooks';
+import { ServiceLinks } from "../../hooks";
 
 function Services({ heading, subHeading, showValues }) {
   return (
     <Container className="grid place-items-center py-16">
       <section id="#services" className="text-center">
-        <h3 className="mb-4 text-2xl font-semibold text-indigo-600">{subHeading}</h3>
+        <h3 className="mb-4 text-2xl font-semibold text-indigo-600">
+          {subHeading}
+        </h3>
         <h2 className="mb-4 text-center text-4xl font-extrabold text-gray-700 md:text-5xl">
           {heading}
         </h2>
@@ -51,7 +53,7 @@ function Services({ heading, subHeading, showValues }) {
 Services.propTypes = {
   heading: PropTypes.string,
   subHeading: PropTypes.string,
-  showValues: PropTypes.bool
+  showValues: PropTypes.bool,
 };
 
 export default Services;

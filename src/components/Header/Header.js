@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
-import { FaBars } from 'react-icons/fa';
-import { ImCross } from 'react-icons/im';
+import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 
 // Components
-import { Container, PrimaryLink } from '../UI';
+import { Container, PrimaryLink } from "../UI";
 
 // hooks
-import { HeaderLinks } from '../../hooks';
+import { HeaderLinks } from "../../hooks";
 
 function Header() {
   const [toggleButton, setToggleButton] = useState(false);
@@ -42,7 +42,9 @@ function Header() {
         </button>
         <nav
           className={`rounded-lg p-6 md:block  ${
-            toggleButton ? 'absolute left-0 top-0 z-10 w-full border-2 bg-white' : 'hidden '
+            toggleButton
+              ? "absolute left-0 top-0 z-10 w-full border-2 bg-white"
+              : "hidden "
           }`}
         >
           <ul className="text-md grid place-items-center font-semibold tracking-wide text-gray-700 md:flex">
@@ -51,8 +53,8 @@ function Header() {
                 <PrimaryLink
                   route={link.route}
                   name={link.name}
-                  className={`${HeaderLinks.length - 1 === index ? '' : 'mr-7'} ${
-                    toggleButton && 'mr-0'
+                  className={`${HeaderLinks.length - 1 === index ? "" : "mr-7"} ${
+                    toggleButton && "mr-0"
                   }`}
                 />
               </li>

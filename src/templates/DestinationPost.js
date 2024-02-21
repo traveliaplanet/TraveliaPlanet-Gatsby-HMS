@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import PropTypes from "prop-types";
+import React from "react";
+import { graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // Components
 // import Seo from 'components/SEO';
-import Layout from 'components/Layout';
-import AboutDestination from 'components/AboutDestination';
-import Benefits from 'components/Benefits';
+import Layout from "components/Layout";
+import AboutDestination from "components/AboutDestination";
+import Benefits from "components/Benefits";
 
 export const query = graphql`
   query ($slug: String!) {
@@ -77,7 +77,7 @@ DestinationPost.propTypes = {
   heading: PropTypes.string,
   shortdescription: PropTypes.string,
   duration: PropTypes.number,
-  price: PropTypes.number
+  price: PropTypes.number,
 };
 
 export default DestinationPost;

@@ -1,23 +1,26 @@
-import React from 'react';
+import React from "react";
 // components
-import Layout from 'components/Layout';
-import Seo from 'components/SEO';
-import { Container, OfficeCard, WhatsappButton } from 'components/UI';
+import Layout from "components/Layout";
+import Seo from "components/SEO";
+import { Container, OfficeCard, WhatsappButton } from "components/UI";
 // assets
-import ContactUs from '../images/contact.svg';
+import ContactUs from "../images/contact.svg";
 
 const contact = () => (
   <Layout>
     <Container className="grid place-items-center py-16 ">
       <div className="py-16 md:flex md:items-center ">
         <div className="grid place-items-center  text-center md:place-items-start md:text-start">
-          <h2 className="mb-4 text-lg font-semibold text-indigo-600">Contact Us</h2>
+          <h2 className="mb-4 text-lg font-semibold text-indigo-600">
+            Contact Us
+          </h2>
           <h3 className="mb-4 text-3xl font-extrabold text-gray-700 md:text-5xl">
-            Feel free to <span className="text-indigo-600"> get in touch</span> with us
+            Feel free to <span className="text-indigo-600"> get in touch</span>{" "}
+            with us
           </h3>
           <p className="text-lg font-semibold text-gray-500 md:text-xl">
-            Have a question about your plan or package? Contact us 24 hours a day 7 days a week for
-            the best customer service!
+            Have a question about your plan or package? Contact us 24 hours a
+            day 7 days a week for the best customer service!
           </p>
           <form
             className="my-6 grid w-full cursor-pointer gap-6 text-gray-500 md:w-2/3"
@@ -69,8 +72,8 @@ const contact = () => (
               cols="5"
               rows="5"
             >
-              Invitation Letter Required for Visa Processing. Information Required for Pakistan
-              Tour.
+              Invitation Letter Required for Visa Processing. Information
+              Required for Pakistan Tour.
             </textarea>
             <button
               type="submit"
@@ -87,12 +90,21 @@ const contact = () => (
       </div>
       <div className="grid place-items-center gap-y-10 py-16">
         <div className="grid gap-3 text-center md:w-1/2">
-          <h2 className="mb-4 text-lg font-semibold text-indigo-600">Locations</h2>
-          <h3 className="mb-4 text-3xl font-extrabold text-gray-700 md:text-5xl">Our Office</h3>
+          <h2 className="mb-4 text-lg font-semibold text-indigo-600">
+            Locations
+          </h2>
+          <h3 className="mb-4 text-3xl font-extrabold text-gray-700 md:text-5xl">
+            Our Office
+          </h3>
           <p className="text-left text-lg font-semibold text-gray-500 md:text-xl">
-            Please contact Travelia Planet Administrative Office or Travel Support at
-            <span className="text-indigo-600"> traveliaplanet@gmail.com</span> if you encounter any
-            difficulty in accessing the travel package or if you have travel related questions.
+            Please contact Travelia Planet Administrative Office or Travel
+            Support at
+            <span className="text-indigo-600">
+              {" "}
+              traveliaplanet@gmail.com
+            </span>{" "}
+            if you encounter any difficulty in accessing the travel package or
+            if you have travel related questions.
           </p>
         </div>
         <OfficeCard

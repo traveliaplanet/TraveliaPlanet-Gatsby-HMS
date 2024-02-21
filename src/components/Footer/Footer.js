@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import React from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 // Components
-import { Container, PrimaryLink } from '../UI';
+import { Container, PrimaryLink } from "../UI";
 
 // hooks
-import { HeaderLinks, SocialLinks } from '../../hooks';
+import { HeaderLinks, SocialLinks } from "../../hooks";
 
 function Footer() {
   return (
@@ -30,7 +30,7 @@ function Footer() {
                 <PrimaryLink
                   route={link.route}
                   name={link.name}
-                  className={`${HeaderLinks.length - 1 === index ? '' : 'md:mr-7'}`}
+                  className={`${HeaderLinks.length - 1 === index ? "" : "md:mr-7"}`}
                 />
               </li>
             ))}
@@ -43,7 +43,7 @@ function Footer() {
               target="_blank"
               route={link.route}
               component={link.component}
-              className={`${SocialLinks.length - 1 === index ? '' : 'mr-7'} border-none text-4xl`}
+              className={`${SocialLinks.length - 1 === index ? "" : "mr-7"} border-none text-4xl`}
             />
           ))}
         </div>

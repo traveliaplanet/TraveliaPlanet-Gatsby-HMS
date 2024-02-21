@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function BenefitsCard({ component, title, className }) {
   return (
@@ -9,7 +9,9 @@ function BenefitsCard({ component, title, className }) {
       >
         {component}
       </div>
-      <h3 className="mb-4 text-xs font-bold text-gray-700 md:text-xl">{title}</h3>
+      <h3 className="mb-4 text-xs font-bold text-gray-700 md:text-xl">
+        {title}
+      </h3>
     </div>
   );
 }
@@ -17,7 +19,7 @@ function BenefitsCard({ component, title, className }) {
 BenefitsCard.propTypes = {
   component: PropTypes.object,
   title: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default BenefitsCard;

@@ -1,35 +1,42 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { graphql } from 'gatsby';
+import PropTypes from "prop-types";
+import React from "react";
+import { graphql } from "gatsby";
 
 // Components
-import Seo from 'components/SEO';
-import Layout from 'components/Layout';
-import Hero from 'components/Hero';
-import Services from 'components/Services';
-import AllDestinations from 'components/AllDestinations';
-import TrendingTours from 'components/TrendingTours';
-import Offers from 'components/Offers';
-import Testimonials from 'components/Testimonials';
-import Questions from 'components/Questions';
+import Seo from "components/SEO";
+import Layout from "components/Layout";
+import Hero from "components/Hero";
+import Services from "components/Services";
+import AllDestinations from "components/AllDestinations";
+import TrendingTours from "components/TrendingTours";
+import Offers from "components/Offers";
+import Testimonials from "components/Testimonials";
+import Questions from "components/Questions";
 
 function IndexPage({ data }) {
   const Offer = [
     {
-      title: 'We have the best Services.',
+      title: "We have the best Services.",
       description:
-        'Travelia Planet has a team of professionals who have been in the tourism industry for many years and who are extremely determined to provide a different vision for travelling to all clients so that they may experience the best and then return satisfied with our service. Travelia Planet management philosophy is based on the simple concept of delivering the highest quality customer services at the best possible price.',
-      image: `https://res.cloudinary.com/hms-software/image/upload/v1708440997/khunjerab_dh4uhn.jpg`
-    }
+        "Travelia Planet has a team of professionals who have been in the tourism industry for many years and who are extremely determined to provide a different vision for travelling to all clients so that they may experience the best and then return satisfied with our service. Travelia Planet management philosophy is based on the simple concept of delivering the highest quality customer services at the best possible price.",
+      image: `https://res.cloudinary.com/hms-software/image/upload/v1708440997/khunjerab_dh4uhn.jpg`,
+    },
   ];
-  const popularDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.ispopular);
-  const trendingDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.istrending);
+  const popularDestinations = data.allDatoCmsDestination.nodes.filter(
+    (i) => i.ispopular,
+  );
+  const trendingDestinations = data.allDatoCmsDestination.nodes.filter(
+    (i) => i.istrending,
+  );
 
   return (
     <Layout>
       <Hero />
       <Services />
-      <AllDestinations heading="Popular Destinations" destinations={popularDestinations} />
+      <AllDestinations
+        heading="Popular Destinations"
+        destinations={popularDestinations}
+      />
       <TrendingTours destinations={trendingDestinations} />
       <Offers
         heading={Offer[0].title}
@@ -79,7 +86,7 @@ export const query = graphql`
 `;
 
 IndexPage.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 export default IndexPage;

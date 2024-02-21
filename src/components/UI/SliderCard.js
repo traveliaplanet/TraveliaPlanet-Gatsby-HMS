@@ -1,15 +1,28 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import { AiFillStar, AiOutlineDollar, AiOutlineClockCircle } from 'react-icons/ai';
-import { GoLocation } from 'react-icons/go';
+import {
+  AiFillStar,
+  AiOutlineDollar,
+  AiOutlineClockCircle,
+} from "react-icons/ai";
+import { GoLocation } from "react-icons/go";
 
 // Components
-import { Container, PrimaryButton } from './index';
+import { Container, PrimaryButton } from "./index";
 
-function SliderCard({ heading, shortDescription, rating, location, price, image, slug, duration }) {
+function SliderCard({
+  heading,
+  shortDescription,
+  rating,
+  location,
+  price,
+  image,
+  slug,
+  duration,
+}) {
   // console.log(image);
   return (
     <Container className="mb-10 max-w-[400px]">
@@ -43,7 +56,10 @@ function SliderCard({ heading, shortDescription, rating, location, price, image,
       </article>
 
       <Link to={`/destinations/${slug}/`}>
-        <PrimaryButton text="Book Now" className="rounded-none rounded-br-[50px]" />
+        <PrimaryButton
+          text="Book Now"
+          className="rounded-none rounded-br-[50px]"
+        />
       </Link>
     </Container>
   );
@@ -57,7 +73,7 @@ SliderCard.propTypes = {
   price: PropTypes.number,
   image: PropTypes.object,
   slug: PropTypes.string,
-  duration: PropTypes.number
+  duration: PropTypes.number,
 };
 
 export default SliderCard;

@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "gatsby";
 
 // Components
-import { Container, PrimaryButton } from '../UI';
+import { Container, PrimaryButton } from "../UI";
 
 function Offers({
   image,
@@ -15,7 +15,7 @@ function Offers({
   subHeading,
   description,
   buttonText,
-  link
+  link,
 }) {
   return (
     <Container>
@@ -31,12 +31,16 @@ function Offers({
         <div className="text-center md:grid md:text-left">
           <div>
             {subHeading && (
-              <h3 className="mb-4 text-2xl font-semibold text-indigo-600">{subHeading}</h3>
+              <h3 className="mb-4 text-2xl font-semibold text-indigo-600">
+                {subHeading}
+              </h3>
             )}
             <h2 className="mb-4 text-center text-4xl font-extrabold text-gray-700 md:text-left md:text-5xl">
               {heading}
             </h2>
-            <p className="mb-10 font-medium text-gray-500 md:mb-0 md:text-xl">{description}</p>
+            <p className="mb-10 font-medium text-gray-500 md:mb-0 md:text-xl">
+              {description}
+            </p>
           </div>
           <div>
             {showLinks && (
@@ -77,7 +81,7 @@ Offers.propTypes = {
   subHeading: PropTypes.string,
   description: PropTypes.string,
   buttonText: PropTypes.string,
-  link: PropTypes.string
+  link: PropTypes.string,
 };
 
 export default Offers;

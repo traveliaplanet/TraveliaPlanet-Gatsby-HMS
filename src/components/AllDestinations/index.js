@@ -1,3 +1,3 @@
-import AllDestinations from './AllDestinations';
+import AllDestinations from "./AllDestinations";
 
 export default AllDestinations;

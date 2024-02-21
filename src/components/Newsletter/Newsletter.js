@@ -1,8 +1,8 @@
-import React from 'react';
-import { TbMailOpened } from 'react-icons/tb';
+import React from "react";
+import { TbMailOpened } from "react-icons/tb";
 
 // Components
-import { PrimaryButton, Container } from '../UI';
+import { PrimaryButton, Container } from "../UI";
 
 function Newsletter() {
   return (
@@ -10,7 +10,9 @@ function Newsletter() {
       <div className="grid place-items-center gap-4 text-white md:flex md:items-center md:justify-center">
         <TbMailOpened className="text-7xl text-green-500" />
         <div className="text-center ">
-          <h2 className="mb-2 text-4xl font-bold md:mb-1 md:text-5xl">Newsletter</h2>
+          <h2 className="mb-2 text-4xl font-bold md:mb-1 md:text-5xl">
+            Newsletter
+          </h2>
           <p className="font-semibold text-gray-500">
             Subscribe now to get our latest Tour Packages.
           </p>

@@ -1,12 +1,16 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "gatsby";
 
-import { AiFillStar, AiOutlineDollar, AiOutlineClockCircle } from 'react-icons/ai';
-import { GoLocation } from 'react-icons/go';
+import {
+  AiFillStar,
+  AiOutlineDollar,
+  AiOutlineClockCircle,
+} from "react-icons/ai";
+import { GoLocation } from "react-icons/go";
 
 // Components
-import { Container, PrimaryButton } from 'components/UI';
+import { Container, PrimaryButton } from "components/UI";
 
 function AboutDestination({
   tourPlan,
@@ -15,7 +19,7 @@ function AboutDestination({
   Price,
   Heading,
   shortDescription,
-  Rating
+  Rating,
 }) {
   return (
     <Container className="py-16">
@@ -29,7 +33,8 @@ function AboutDestination({
             </dd>
             <dt className="font-semibold">Duration</dt>
             <dd className="mb-2 flex items-center text-lg font-normal">
-              <AiOutlineClockCircle className="mr-2" /> {Duration} Days {Duration - 1} Nights
+              <AiOutlineClockCircle className="mr-2" /> {Duration} Days{" "}
+              {Duration - 1} Nights
             </dd>
             <dt className=" font-semibold">Price</dt>
             <dd className="mb-2 flex items-center text-lg font-normal">
@@ -50,11 +55,15 @@ function AboutDestination({
           </dl>
         </div>
         <div className="my-16 grid place-items-center text-center md:my-0 md:grid md:text-left">
-          <h3 className="mb-4 text-2xl font-semibold text-indigo-600">About place</h3>
+          <h3 className="mb-4 text-2xl font-semibold text-indigo-600">
+            About place
+          </h3>
           <h2 className="mb-4 text-center text-4xl font-extrabold text-gray-700 md:text-left md:text-5xl">
             Explore {Heading} with us
           </h2>
-          <p className="mb-10 font-medium text-gray-500 md:text-xl">{shortDescription}</p>
+          <p className="mb-10 font-medium text-gray-500 md:text-xl">
+            {shortDescription}
+          </p>
           <pre className="mb-10 w-full text-wrap text-start font-medium text-gray-500 md:text-lg">
             {tourPlan}
           </pre>
@@ -73,7 +82,7 @@ AboutDestination.propTypes = {
   shortDescription: PropTypes.string,
   Heading: PropTypes.string,
   Rating: PropTypes.number,
-  Price: PropTypes.number
+  Price: PropTypes.number,
 };
 
 export default AboutDestination;

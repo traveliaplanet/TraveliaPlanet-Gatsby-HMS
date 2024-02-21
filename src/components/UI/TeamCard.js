@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
 function TeamCard({ image, title, name, className }) {
   return (
@@ -13,8 +13,12 @@ function TeamCard({ image, title, name, className }) {
         />
       </div>
       <div className="text-center">
-        <h3 className="text-md mb-1 font-bold uppercase text-indigo-600">{title}</h3>
-        <p className="text-center text-xl font-semibold text-gray-600">{name}</p>
+        <h3 className="text-md mb-1 font-bold uppercase text-indigo-600">
+          {title}
+        </h3>
+        <p className="text-center text-xl font-semibold text-gray-600">
+          {name}
+        </p>
       </div>
     </div>
   );
@@ -24,7 +28,7 @@ TeamCard.propTypes = {
   image: PropTypes.object,
   title: PropTypes.string,
   className: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
 };
 
 export default TeamCard;
