@@ -2,7 +2,7 @@ import React from 'react';
 // components
 import Layout from 'components/Layout';
 import Seo from 'components/SEO';
-import { PrimaryButton, Container, OfficeCard, WhatsappButton } from 'components/UI';
+import { Container, OfficeCard, WhatsappButton } from 'components/UI';
 // assets
 import ContactUs from '../images/contact.svg';
 
