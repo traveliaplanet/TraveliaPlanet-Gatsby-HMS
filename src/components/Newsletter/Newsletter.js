@@ -17,10 +17,10 @@ function Newsletter() {
         </div>
         <form
           className="grid w-full place-items-center gap-4 md:flex md:w-1/3 md:gap-0"
-          name="Newsletter"
+          name="newsletter"
           method="POST"
           data-netlify="true"
-          action="/thank-you/"
+          // action="/thank-you/"
         >
           <input type="hidden" name="form-name" value="newsletter" />
           <input
