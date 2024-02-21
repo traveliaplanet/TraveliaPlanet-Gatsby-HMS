@@ -18,6 +18,7 @@ function Newsletter() {
         <form
           className="grid w-full place-items-center gap-4 md:flex md:w-1/3 md:gap-0"
           name="Newsletter"
+          id="newsletter"
           method="POST"
           data-netlify="true"
           action="/thank-you"
@@ -26,6 +27,7 @@ function Newsletter() {
           <input
             placeholder="Your Email Address"
             name="email"
+            id="email"
             required
             type="email"
             className="w-full rounded-l-md border-r-0 bg-slate-700 py-4 pl-4 text-lg font-bold outline-none focus:border focus:border-indigo-600"
