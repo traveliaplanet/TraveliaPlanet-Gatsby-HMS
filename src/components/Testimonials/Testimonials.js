@@ -54,9 +54,9 @@ function Testimonials() {
             {useTestimonialData().map((testimonial, index) => (
               <div key={index} className="relative my-10 lg:mt-20">
                 <blockquote className="mb-6 text-center text-lg leading-tight text-gray-500 lg:text-left lg:text-2xl">
-                  <ImQuotesLeft className="mr-2 -mt-3 inline-block h-6 w-6 text-3xl text-indigo-600 opacity-75" />
+                  <ImQuotesLeft className="-mt-3 mr-2 inline-block h-6 w-6 text-3xl text-indigo-600 opacity-75" />
                   {testimonial.quote}
-                  <ImQuotesRight className="ml-2 -mt-3 inline-block h-6 w-6 text-3xl text-indigo-600 opacity-75" />
+                  <ImQuotesRight className="-mt-3 ml-2 inline-block h-6 w-6 text-3xl text-indigo-600 opacity-75" />
                 </blockquote>
                 <div className="grid place-items-center gap-2 md:flex md:items-center">
                   <BsPersonCircle className="mr-4 text-7xl text-yellow-500" />

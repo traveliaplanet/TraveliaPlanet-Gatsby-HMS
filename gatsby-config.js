@@ -57,7 +57,7 @@ module.exports = {
         name: `Travelia Planet`,
         short_name: `Tourism`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#FFFF`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
