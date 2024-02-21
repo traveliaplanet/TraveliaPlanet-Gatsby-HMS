@@ -17,9 +17,12 @@ function Newsletter() {
         </div>
         <form
           className="grid w-full place-items-center gap-4 md:flex md:w-1/3 md:gap-0"
-          action="https://formspree.io/f/xayknyda"
-          method="post"
+          name="Newsletter"
+          method="POST"
+          data-netlify="true"
+          action="/thank-you"
         >
+          <input type="hidden" name="form-name" value="newsletter" />
           <input
             placeholder="Your Email Address"
             name="email"
