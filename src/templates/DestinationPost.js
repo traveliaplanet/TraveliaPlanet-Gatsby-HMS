@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 // Components
-// import Seo from 'components/SEO';
+import Seo from 'components/SEO';
 import Layout from "components/Layout";
 import AboutDestination from "components/AboutDestination";
 import Benefits from "components/Benefits";
@@ -36,7 +36,7 @@ function DestinationPost({ data }) {
           alt={datoCmsData.heading}
           className="h-96 w-full object-cover"
         />
-        <h2 className="absolute m-auto text-center text-7xl font-bold text-white">
+        <h2 className="absolute text-5xl m-auto text-center md:text-7xl font-bold text-white">
           {datoCmsData.heading}
         </h2>
       </div>
@@ -54,22 +54,22 @@ function DestinationPost({ data }) {
   );
 }
 
-// export function Head({ data }) {
-//   Head.propTypes = {
-//     data: PropTypes.object
-//   };
-//   return (
-//     <Seo title={data.strapiDestination.Heading}>
-//       <meta
-//         property="og:image"
-//         content={`https://traveliaplanet.com${
-//           data.strapiDestination?.Thumbnail?.localFile?.publicURL ||
-//           '/static/home-210451c84a308ebfd6aacb3623c135ed.jpg'
-//         }`}
-//       />
-//     </Seo>
-//   );
-// }
+export function Head({ data }) {
+  Head.propTypes = {
+    data: PropTypes.object
+  };
+  return (
+    <Seo title={data.datoCmsDestination.heading}>
+      <meta
+        property="og:image"
+        content={`https://traveliaplanet.com${
+          data.strapiDestination?.url ||
+          '/static/home-210451c84a308ebfd6aacb3623c135ed.jpg'
+        }`}
+      />
+    </Seo>
+  );
+}
 
 DestinationPost.propTypes = {
   data: PropTypes.object,
