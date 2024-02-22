@@ -15,7 +15,7 @@ function Questions() {
     else setActiveQuestionIndex(questionIndex);
   };
   return (
-    <Container id="#questions" className="grid md:grid-cols-2 lg:gap-24 gap-4">
+    <Container id="#questions" className="grid md:grid-cols-2 md:gap-24 gap-4">
         <StaticImage
           className="rounded-md object-cover md:h-[600px] w-full"
           src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"

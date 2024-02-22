@@ -1,12 +1,9 @@
 import React from 'react';
 import { TbMailOpened } from 'react-icons/tb';
 
-// Components
-import { Container } from '../UI';
-
 function Newsletter() {
   return (
-    <Container id='Newsletter' className="bg-slate-800 py-28 grid lg:grid-flow-col place-content-center place-items-center gap-4 text-white">
+    <section id='Newsletter' className="bg-slate-800 py-16 md:py-28 grid lg:grid-flow-col place-content-center place-items-center gap-4 text-white">
         <TbMailOpened className="text-7xl text-green-500" />
         <div className="text-center ">
           <h1 className="mb-1 text-green-500">Newsletter</h1>
@@ -37,7 +34,7 @@ function Newsletter() {
             Subscribe Now
           </button>
         </form>
-    </Container>
+    </section>
   );
 }
 

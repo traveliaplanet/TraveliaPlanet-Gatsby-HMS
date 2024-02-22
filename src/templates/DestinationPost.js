@@ -30,6 +30,7 @@ function DestinationPost({ data }) {
   const datoCmsData = data.datoCmsDestination;
   return (
     <Layout>
+      <section className='pt-[110px]'>
       <div className="relative flex items-center justify-center ">
         <GatsbyImage
           image={datoCmsData.thumbnail?.gatsbyImageData}
@@ -50,6 +51,7 @@ function DestinationPost({ data }) {
         tourPlan={datoCmsData.tourPlan}
       />
       <Benefits />
+      </section>
     </Layout>
   );
 }

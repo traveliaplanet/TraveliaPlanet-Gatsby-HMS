@@ -32,7 +32,7 @@ const aboutData = [
 ];
 const about = () => (
   <Layout>
-    <Container>
+    <section className='pt-[110px]'>
       <Offers
         imgRight
         image={aboutData[0].image}
@@ -57,7 +57,7 @@ const about = () => (
       />
       <Services heading="We follow these." subHeading="OUR VALUES" showValues />
       <Team heading="Meet these Fine Folks." subHeading="Our Team" />
-    </Container>
+      </section>
   </Layout>
 );
 export function Head() {

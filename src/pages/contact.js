@@ -8,7 +8,7 @@ import ContactUs from '../images/contact.svg';
 
 const contact = () => (
   <Layout>
-    <Container className="grid place-items-center py-16 ">
+    <Container className="grid place-items-center pt-[110px]">
       <div className="py-16 md:flex md:items-center ">
         <div className="grid place-items-center  text-center md:place-items-start md:text-start">
           <h2 className="mb-4 text-lg font-semibold text-indigo-600">Contact Us</h2>

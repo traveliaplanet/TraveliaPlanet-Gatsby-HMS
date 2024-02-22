@@ -15,7 +15,7 @@ function destinations({ data }) {
   const pakistanDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.ispakistani);
   return (
     <Layout>
-      <Container>
+      <section className='pt-[110px]'>
         <div className="flex flex-col items-center justify-center py-16 text-center">
           <div className="md:w-1/2">
             <h3 className="mb-4 text-2xl font-semibold text-indigo-600">All Destinations</h3>
@@ -47,7 +47,7 @@ function destinations({ data }) {
         <article>
           <AllDestinations heading="International Tours" destinations={internationalDestinations} />
         </article>
-      </Container>
+      </section>
     </Layout>
   );
 }
