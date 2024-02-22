@@ -10,47 +10,45 @@ import { HeaderLinks, SocialLinks } from '../../hooks';
 
 function Footer() {
   return (
-    <footer>
-      <Container className="grid place-items-center bg-slate-900 py-20 text-center text-white">
-        <div className="mb-10 flex items-center font-bold tracking-wide">
+    <footer id='#footer' className="grid gap-8 md:gap-4 place-items-center place-content-center bg-slate-900 py-20 text-center text-gray-200">
+        <div className="flex items-center justify-between font-bold">
           <StaticImage
-            placeholder="blurred"
-            src="https://res.cloudinary.com/hms-software/image/upload/v1708443469/Travelia_without_bg_logo_ylswzk.png"
-            alt="Travelia Logo"
-            className="max-h-[100px] max-w-[100px]"
+           placeholder="blurred"
+           src="https://res.cloudinary.com/hms-software/image/upload/v1708443469/Travelia_without_bg_logo_ylswzk.png"
+           alt="Travelia Planet Logo"
+           className='max-h-[80px] max-w-[80px]'
           />
-          <h2 className="cursor-pointer px-2        text-3xl tracking-wide transition duration-300 hover:text-indigo-600 md:px-4">
+          <h1 className="w-full cursor-pointer pl-4 text-gray-200 text-xl transition duration-300 hover:text-indigo-600 md:ml-4 md:text-3xl ">
             <Link to="/">Travelia Planet</Link>
-          </h2>
+          </h1>
         </div>
-        <nav className="mb-10">
+        <nav className="">
           <ul className="md:flex">
             {HeaderLinks.map((link, index) => (
               <li key={index}>
                 <PrimaryLink
                   route={link.route}
                   name={link.name}
-                  className={`${HeaderLinks.length - 1 === index ? '' : 'md:mr-7'}`}
+                  className={`${HeaderLinks.length - 1 === index ? '' : 'md:mr-6'}`}
                 />
               </li>
             ))}
           </ul>
         </nav>
-        <div className="mb-10 flex">
+        <div className="flex">
           {SocialLinks.map((link, index) => (
             <PrimaryLink
               key={index}
               target="_blank"
               route={link.route}
               component={link.component}
-              className={`${SocialLinks.length - 1 === index ? '' : 'mr-7'} border-none text-4xl`}
+              className={`${SocialLinks.length - 1 === index ? '' : 'mr-7'} border-none text-[30px]`}
             />
           ))}
         </div>
-        <p className="font-semibold text-gray-500">
+        <p className="font-semibold text-gray-500 px-4">
           © Copyright 2022, Travelia Planet SMC PVT LTD. All Rights Reserved.
         </p>
-      </Container>
     </footer>
   );
 }

@@ -15,32 +15,25 @@ function Questions() {
     else setActiveQuestionIndex(questionIndex);
   };
   return (
-    <Container className="py-16">
-      <section id="#questions" className="justify-between md:flex">
+    <Container id="#questions" className="grid md:grid-cols-2 lg:gap-24 gap-4">
         <StaticImage
-          className="mb-4 rounded-xl object-cover md:mb-0 md:mr-10 md:h-[600px]"
+          className="rounded-md object-cover md:h-[600px] w-full"
           src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"
           placeholder="blurred"
           alt="What we Offer"
         />
-        <div className="grid gap-4 text-justify md:text-left">
-          <h2 className="text-center text-4xl font-extrabold text-gray-700 md:text-left md:text-5xl">
+        <div className="grid place-content-start place-items-start gap-4 text-justify md:text-left">
+          <h1>
             Questions
-          </h2>
-          <p className="font-medium text-gray-500 md:text-xl">
+          </h1>
+          <h4 className="">
             Here are some frequently asked questions about our Tours from our loving customers.
             Should you have any other questions, feel free to reach out via the contact form below.
-          </p>
-          {/* <StaticImage
-            className="rounded-xl object-cover md:hidden md:h-[600px]"
-            src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"
-            placeholder="blurred"
-            alt="What we Offer"
-          /> */}
+          </h4>
           <dl className="grid w-full gap-2">
             {QuestionsData.map((faq, index) => (
               <button
-                className="rounded-lg border-2 p-4 transition-all duration-300 "
+                className={`${activeQuestionIndex === index ? "border-indigo-600" : ""} rounded-md hover:border-indigo-600 border-2 p-4 transition-all duration-300`}
                 type="button"
                 aria-label="questions"
                 key={index}
@@ -63,7 +56,6 @@ function Questions() {
             ))}
           </dl>
         </div>
-      </section>
     </Container>
   );
 }

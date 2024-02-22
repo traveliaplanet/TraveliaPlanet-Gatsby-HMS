@@ -21,7 +21,7 @@ function Header() {
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY > 90) {
       setSticky(true);
     } else {
       setSticky(false);
@@ -33,23 +33,22 @@ function Header() {
 
   return (
     <header
-      className={`z-100 flex w-full items-center justify-between px-6 py-4 md:p-6 lg:px-16 ${
+      className={`z-100 h-[110px] flex w-full items-center justify-between px-6 py-4 md:p-6 lg:px-16 ${
         sticky
-          ? 'shadow-sticky fixed z-[9999] bg-white !bg-opacity-80 backdrop-blur-sm transition'
-          : 'fixed z-[9999] bg-transparent'
+          ? 'shadow-sticky fixed z-[9999] bg-slate-50 !bg-opacity-90 backdrop-blur-sm transition'
+          : 'fixed z-[9999] bg-transparent '
       }`}
     >
       <div className="flex items-center justify-between font-bold">
         <StaticImage
           placeholder="blurred"
           src="https://res.cloudinary.com/hms-software/image/upload/v1708443469/Travelia_without_bg_logo_ylswzk.png"
-          alt="Travelia Logo"
-          height={80}
-          width={80}
+          alt="Travelia Planet Logo"
+          className='max-h-[80px] max-w-[80px]'
         />
-        <h2 className="text-bold w-full cursor-pointer pl-2 text-xl text-gray-700 transition duration-300 hover:text-indigo-600 md:ml-4 md:text-3xl">
+        <h1 className={`w-full cursor-pointer pl-4 text-xl transition duration-300 hover:text-indigo-600 md:ml-4 md:text-3xl ${sticky ? 'text-indigo-600': 'text-gray-700'}`}>
           <Link to="/">Travelia Planet</Link>
-        </h2>
+        </h1>
       </div>
       <button
         onClick={mobileNav}
