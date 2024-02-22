@@ -12,9 +12,25 @@
 
 h1 {
   font-size: 36px;
+  line-height: 40px;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
   font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+h3 {
+  font-size: 1.25rem /* 20px */;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 h4 {
@@ -22,6 +38,13 @@ h4 {
   line-height: 1.75rem /* 28px */;
   line-height: 2rem /* 32px */;
   letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+p {
+  font-size: 16px;
+  font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }

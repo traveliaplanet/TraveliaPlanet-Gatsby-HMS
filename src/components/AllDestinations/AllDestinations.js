@@ -17,14 +17,14 @@ function AllDestinations({ destinations, heading }) {
     dots: true,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 2
         }
       },
 
       {
-        breakpoint: 900,
+        breakpoint: 750,
         settings: {
           slidesToShow: 1
         }
@@ -33,34 +33,29 @@ function AllDestinations({ destinations, heading }) {
   };
 
   return (
-    <Container>
-      <section id="#allDestinations" className="pb-8 md:pb-16">
-        <div className="py-16 md:flex md:justify-between">
-          <h2 className="mb-4 text-center text-4xl font-extrabold text-gray-700 md:text-left md:text-5xl">
-            {heading}
-          </h2>
-          <div className="flex justify-end">
-            <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
-            <SlideRight onClick={sliderRef?.slickNext} />
-          </div>
+    <Container id="allDestinations" className='pb-12'>
+      <div className="md:flex md:justify-between md:pb-16">
+        <h1 className="mb-4 md:mb-0">{heading}</h1>
+        <div className="flex justify-end">
+          <SlideLeft onClick={sliderRef?.slickPrev} className="mb-4 mr-4 md:mb-0" />
+          <SlideRight onClick={sliderRef?.slickNext} />
         </div>
-        <Slider ref={setSliderRef} {...settings} className="grid grid-cols-3">
-          {destinations.map((trip, index) => (
-            <div key={index}>
-              <SliderCard
-                heading={trip.heading}
-                rating={trip.rating}
-                image={trip?.thumbnail?.gatsbyImageData}
-                shortDescription={trip.shortdescription}
-                location={trip.location}
-                price={trip.price}
-                slug={trip.slug}
-                duration={trip.duration}
-              />
-            </div>
-          ))}
-        </Slider>
-      </section>
+      </div>
+      <Slider ref={setSliderRef} {...settings}>
+        {destinations.map((trip, index) => (
+          <SliderCard
+            key={index}
+            heading={trip.heading}
+            rating={trip.rating}
+            image={trip?.thumbnail?.gatsbyImageData}
+            shortDescription={trip.shortdescription}
+            location={trip.location}
+            price={trip.price}
+            slug={trip.slug}
+            duration={trip.duration}
+          />
+        ))}
+      </Slider>
     </Container>
   );
 }

@@ -21,7 +21,13 @@ const ServiceLinks = [
     title: 'Customized Trips',
     description:
       'Tell us your preferences and we will create the ideal holiday for you! We can tailor-make tours to suit different needs and wishes.',
-    url: '/contact/'
+    url: '/destinations/'
+  },
+  {
+    component: <MdOutlineDashboardCustomize />,
+    title: 'Visa Services',
+    description: 'We will provide you Visa Services',
+    url: '/visa/'
   }
 ];
 export default ServiceLinks;

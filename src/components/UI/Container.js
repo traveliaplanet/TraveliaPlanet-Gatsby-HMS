@@ -1,9 +1,11 @@
 import propTypes from 'prop-types';
 import React from 'react';
 
-function Container({ children, className }) {
+function Container({ children, className, id }) {
   return (
-    <div className={`"max-w-[1480px] mx-auto px-6 md:px-6 lg:px-16 ${className}`}>{children}</div>
+    <section id={`#${id}`} className={`"max-w-[1480px] mx-auto p-4 md:p-4 lg:p-16 ${className}`}>
+      {children}
+    </section>
   );
 }
 
@@ -13,6 +15,7 @@ Container.defaultProps = {
 
 Container.propTypes = {
   children: propTypes.node,
+  id: propTypes.string,
   className: propTypes.string
 };
 
