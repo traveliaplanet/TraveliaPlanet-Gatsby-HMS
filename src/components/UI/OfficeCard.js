@@ -1,18 +1,10 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 // Components
-import { Container } from "./index";
+import { Container } from './index';
 
-function OfficeCard({
-  province,
-  country,
-  street,
-  houseNo,
-  city,
-  email,
-  phone,
-}) {
+function OfficeCard({ province, country, street, houseNo, city, email, phone }) {
   return (
     <Container className="mb-10 max-w-[400px]">
       <div className="rounded-md border-2 p-6">
@@ -41,7 +33,7 @@ OfficeCard.propTypes = {
   city: PropTypes.string,
   houseNo: PropTypes.string,
   email: PropTypes.string,
-  phone: PropTypes.number,
+  phone: PropTypes.number
 };
 
 export default OfficeCard;

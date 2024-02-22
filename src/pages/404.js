@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 // Components
-import Seo from "components/SEO";
+import Seo from 'components/SEO';
 
 function NotFoundPage() {
   return (

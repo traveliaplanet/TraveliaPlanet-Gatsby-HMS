@@ -1,23 +1,17 @@
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://traveliaplanet.com",
+  URL: NETLIFY_SITE_URL = 'https://traveliaplanet.com',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
 } = process.env;
-const isNetlifyProduction = NETLIFY_ENV === "production";
+const isNetlifyProduction = NETLIFY_ENV === 'production';
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
-const path = require("path");
+const path = require('path');
 
-const gatsbyRequiredRules = path.join(
-  process.cwd(),
-  "node_modules",
-  "gatsby",
-  "dist",
-  "utils",
-);
+const gatsbyRequiredRules = path.join(process.cwd(), 'node_modules', 'gatsby', 'dist', 'utils');
 
 const importAlias = {
-  components: path.resolve(__dirname, "src/components"),
+  components: path.resolve(__dirname, 'src/components')
 };
 
 module.exports = {
@@ -25,18 +19,18 @@ module.exports = {
     title: `North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu Tours, Gilgit Baltistan Tours`,
     description: `Travelia Planet offers best North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu Tours, Gilgit Baltistan Tours and many more with attractive discounts.`,
     author: `@hussainmshah`,
-    siteUrl,
+    siteUrl
   },
   plugins: [
     `gatsby-plugin-image`,
-    "gatsby-plugin-postcss",
+    'gatsby-plugin-postcss',
 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -51,47 +45,47 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `fullscreen`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/logo.png` // This path is relative to the root of the site.
+      }
     },
 
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: importAlias,
-        extensions: [],
-      },
+        extensions: []
+      }
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: siteUrl,
-        sitemap: "https://traveliaplanet.com",
+        sitemap: 'https://traveliaplanet.com',
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: "*" }],
+            policy: [{ userAgent: '*' }]
           },
-          "branch-deploy": {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null,
+            host: null
           },
-          "deploy-preview": {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null,
-          },
-        },
-      },
+            host: null
+          }
+        }
+      }
     },
 
     `gatsby-plugin-force-trailing-slashes`,
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        resolveSiteUrl: () => "https://traveliaplanet.com",
-      },
+        resolveSiteUrl: () => 'https://traveliaplanet.com'
+      }
     },
 
     // DATO CMS
@@ -117,8 +111,8 @@ module.exports = {
 
         // Limits page size and can be used to avoid build timeouts.
         // Default is 500 (also the maximum)
-        pageSize: 500,
-      },
-    },
-  ],
+        pageSize: 500
+      }
+    }
+  ]
 };

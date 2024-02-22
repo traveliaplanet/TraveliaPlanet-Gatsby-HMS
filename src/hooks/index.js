@@ -1,10 +1,10 @@
-import HeaderLinks from "./Headerlinks";
-import SocialLinks from "./SocialLinks";
-import ServiceLinks from "./ServiceLinks";
-import useTestimonialData from "./useTestimonialData";
-import QuestionsData from "./QuestionsData";
-import TeamData from "./TeamData";
-import BenefitsData from "./BenefitsData";
+import HeaderLinks from './Headerlinks';
+import SocialLinks from './SocialLinks';
+import ServiceLinks from './ServiceLinks';
+import useTestimonialData from './useTestimonialData';
+import QuestionsData from './QuestionsData';
+import TeamData from './TeamData';
+import BenefitsData from './BenefitsData';
 
 export {
   SocialLinks,
@@ -13,5 +13,5 @@ export {
   useTestimonialData,
   QuestionsData,
   TeamData,
-  BenefitsData,
+  BenefitsData
 };

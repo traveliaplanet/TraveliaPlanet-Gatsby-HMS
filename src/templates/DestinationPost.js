@@ -1,13 +1,13 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // Components
 import Seo from 'components/SEO';
-import Layout from "components/Layout";
-import AboutDestination from "components/AboutDestination";
-import Benefits from "components/Benefits";
+import Layout from 'components/Layout';
+import AboutDestination from 'components/AboutDestination';
+import Benefits from 'components/Benefits';
 
 export const query = graphql`
   query ($slug: String!) {
@@ -36,7 +36,7 @@ function DestinationPost({ data }) {
           alt={datoCmsData.heading}
           className="h-96 w-full object-cover"
         />
-        <h2 className="absolute text-5xl m-auto text-center md:text-7xl font-bold text-white">
+        <h2 className="absolute m-auto text-center text-5xl font-bold text-white md:text-7xl">
           {datoCmsData.heading}
         </h2>
       </div>
@@ -63,8 +63,7 @@ export function Head({ data }) {
       <meta
         property="og:image"
         content={`https://traveliaplanet.com${
-          data.strapiDestination?.url ||
-          '/static/home-210451c84a308ebfd6aacb3623c135ed.jpg'
+          data.strapiDestination?.url || '/static/home-210451c84a308ebfd6aacb3623c135ed.jpg'
         }`}
       />
     </Seo>
@@ -77,7 +76,7 @@ DestinationPost.propTypes = {
   heading: PropTypes.string,
   shortdescription: PropTypes.string,
   duration: PropTypes.number,
-  price: PropTypes.number,
+  price: PropTypes.number
 };
 
 export default DestinationPost;

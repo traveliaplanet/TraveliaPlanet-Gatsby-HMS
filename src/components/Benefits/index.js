@@ -1,3 +1,3 @@
-import Benefits from "./Benefits";
+import Benefits from './Benefits';
 
 export default Benefits;

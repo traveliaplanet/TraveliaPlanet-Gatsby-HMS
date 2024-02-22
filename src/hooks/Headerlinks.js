@@ -1,20 +1,20 @@
 const HeaderLinks = [
   {
-    name: "Home",
-    route: "/",
+    name: 'Home',
+    route: '/'
   },
   {
-    name: "About Us",
-    route: "/about/",
+    name: 'About Us',
+    route: '/about/'
   },
   {
-    name: "Destinations",
-    route: "/destinations/",
+    name: 'Destinations',
+    route: '/destinations/'
   },
   {
-    name: "Contact Us",
-    route: "/contact/",
-  },
+    name: 'Contact Us',
+    route: '/contact/'
+  }
 ];
 
 export default HeaderLinks;

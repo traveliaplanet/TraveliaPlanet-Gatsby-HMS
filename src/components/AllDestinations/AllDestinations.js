@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 // 3rd Parrty
-import Slider from "react-slick";
+import Slider from 'react-slick';
 // Components
-import { Container, SlideLeft, SlideRight, SliderCard } from "../UI";
+import { Container, SlideLeft, SlideRight, SliderCard } from '../UI';
 
 function AllDestinations({ destinations, heading }) {
   const [sliderRef, setSliderRef] = useState(null);
@@ -13,23 +13,23 @@ function AllDestinations({ destinations, heading }) {
     slidesToShow: 3,
     arrows: false,
     slidesToScroll: 1,
-    infinite: true,
+    infinite: false,
     dots: true,
     responsive: [
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 2,
-        },
+          slidesToShow: 2
+        }
       },
 
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+          slidesToShow: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -67,7 +67,7 @@ function AllDestinations({ destinations, heading }) {
 
 AllDestinations.propTypes = {
   destinations: PropTypes.object,
-  heading: PropTypes.string,
+  heading: PropTypes.string
 };
 
 export default AllDestinations;

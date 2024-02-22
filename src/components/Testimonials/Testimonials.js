@@ -1,14 +1,14 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import { BsPersonCircle } from "react-icons/bs";
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
+import { BsPersonCircle } from 'react-icons/bs';
 // 3rd Parrty
-import Slider from "react-slick";
+import Slider from 'react-slick';
 // hooks
-import { useTestimonialData } from "../../hooks";
+import { useTestimonialData } from '../../hooks';
 // Components
-import { Container, SlideLeft, SlideRight } from "../UI";
+import { Container, SlideLeft, SlideRight } from '../UI';
 
 function Testimonials() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -23,36 +23,32 @@ function Testimonials() {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 1,
-        },
+          slidesToShow: 1
+        }
       },
 
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+          slidesToShow: 1
+        }
+      }
+    ]
   };
 
   return (
     <Container>
-      <section
-        id="#testimonials"
-        className="gap-x-16 md:grid md:grid-cols-2 md:pb-16"
-      >
+      <section id="#testimonials" className="gap-x-16 md:grid md:grid-cols-2 md:pb-16">
         <div className="mx-auto grid grid-cols-1 ">
           <h2 className="mb-4 text-center text-4xl font-extrabold text-gray-700 md:text-left md:text-5xl">
             Testimonials
           </h2>
           <p className="mb-4 text-justify text-lg font-medium leading-tight text-gray-500 md:leading-relaxed">
-            All these travelers help foster an understanding between people,
-            providing a cultural exchange between both hosts and guests and
-            increasing the chances to develop mutual sympathy and understanding
-            towards our country while at the same time reducing their
-            prejudices; an aspect much needed in these times. Here are what some
-            of our amazing customers are saying about our tours.
+            All these travelers help foster an understanding between people, providing a cultural
+            exchange between both hosts and guests and increasing the chances to develop mutual
+            sympathy and understanding towards our country while at the same time reducing their
+            prejudices; an aspect much needed in these times. Here are what some of our amazing
+            customers are saying about our tours.
           </p>
           <Slider ref={setTextSliderRef} asNavFor={sliderRef} {...settings}>
             {useTestimonialData().map((testimonial, index) => (
@@ -68,9 +64,7 @@ function Testimonials() {
                     <h3 className="text-2xl font-semibold text-indigo-600 md:text-4xl">
                       {testimonial.name}
                     </h3>
-                    <p className="text-lg font-medium text-gray-500 ">
-                      {testimonial.designation}
-                    </p>
+                    <p className="text-lg font-medium text-gray-500 ">{testimonial.designation}</p>
                   </div>
                 </div>
               </div>
@@ -98,7 +92,7 @@ function Testimonials() {
 }
 
 Testimonials.propTypes = {
-  destinations: PropTypes.object,
+  destinations: PropTypes.object
 };
 
 export default Testimonials;

@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function Seo({ description, title, children }) {
   const { site } = useStaticQuery(graphql`
@@ -29,10 +29,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-CFDCFHM9TV"
-      />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFDCFHM9TV" />
       <script>
         {`
           window.dataLayer = window.dataLayer || [];
@@ -47,13 +44,13 @@ function Seo({ description, title, children }) {
 }
 
 Seo.defaultProps = {
-  description: ``,
+  description: ``
 };
 
 Seo.propTypes = {
   description: PropTypes.string,
   children: PropTypes.node,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default Seo;

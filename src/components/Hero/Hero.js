@@ -1,41 +1,40 @@
-import React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // Components
-import { Container, PrimaryButton, SecondaryButton } from "../UI";
+import { PrimaryButton, SecondaryButton } from '../UI';
 
 function Hero() {
   return (
-    <section id="#hero" className="grid place-items-center bg-slate-50 lg:flex">
-      <Container>
-        <div className="grid place-items-center pt-20 lg:place-items-start">
-          <h1 className="mb-10 text-4xl font-bold text-gray-700 md:text-6xl">
-            Find Perfect Destinations{" "}
-            <span className="text-indigo-600">anywhere you go.</span>
+    <section
+      id="#hero"
+      className="mx-auto grid w-full place-content-between place-items-center gap-24 bg-slate-50 pb-8 md:grid-cols-2 lg:pb-0"
+    >
+      <div className="mx-auto px-6 pt-32 md:pl-6 md:pr-0 lg:pl-16 lg:pt-0">
+        <div className="grid w-full place-items-center lg:place-items-start">
+          <h1 className="mb-4">
+            Find Perfect Destinations <span className="text-indigo-600">anywhere you go.</span>
           </h1>
-          <p className="mb-10 text-lg leading-8 tracking-wide text-gray-600 md:max-w-lg md:text-xl">
-            Travelia Planet offers best North Tours, Kashmir Tours, Naran &
-            Kaghan Tours, Skardu Tours, Gilgit Baltistan Tours and many more
-            with attractive discounts.
-          </p>
-          <div className="mb-16">
-            <div className="grid-flow-col grid-cols-2 gap-x-4 md:grid md:w-[400px]">
-              <Link to="/destinations/">
-                <PrimaryButton text="Explore" className="mb-4 md:mr-4" />
-              </Link>
-              <Link to="/contact/">
-                <SecondaryButton text="Contact Us" />
-              </Link>
-            </div>
+          <h4 className="mb-4">
+            Travelia Planet offers best North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu
+            Tours, Gilgit Baltistan Tours and many more with attractive discounts.
+          </h4>
+          <div className="grid w-full gap-4 md:grid-cols-2">
+            <Link to="/destinations/">
+              <PrimaryButton text="Explore" />
+            </Link>
+            <Link to="/contact/">
+              <SecondaryButton text="Contact Us" />
+            </Link>
           </div>
         </div>
-      </Container>
+      </div>
       <StaticImage
         src="https://res.cloudinary.com/hms-software/image/upload/v1708441153/home_kgo0qr.jpg"
         alt="Home"
         placeholder="blurred"
-        className="object-cover lg:h-auto lg:w-3/4"
+        className="h-full object-cover"
       />
     </section>
   );

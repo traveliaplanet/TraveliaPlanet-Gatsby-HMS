@@ -3,9 +3,36 @@
 @tailwind utilities;
 
 @layer utilities {
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+  line-height: 2rem /* 32px */;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem /* 48px */;
+    line-height: 1;
+  }
+  h4 {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
   }
 }

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 // Components
-import { Container, BenefitsCard } from "../UI";
+import { Container, BenefitsCard } from '../UI';
 
 // hooks
-import { BenefitsData } from "../../hooks";
+import { BenefitsData } from '../../hooks';
 
 function Benefits() {
   return (
@@ -21,7 +21,7 @@ function Benefits() {
             title={benefit.title}
             description={benefit.description}
             component={benefit.component}
-            className={`${BenefitsData.length - 1 === index ? "" : ""} `}
+            className={`${BenefitsData.length - 1 === index ? '' : ''} `}
           />
         ))}
       </div>

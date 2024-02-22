@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 // components
-import Layout from "components/Layout";
-import Seo from "components/SEO";
+import Layout from 'components/Layout';
+import Seo from 'components/SEO';
 import {
-  PrimaryButton,
-  Container,
-  OfficeCard,
-  WhatsappButton,
-} from "components/UI";
+  // PrimaryButton,
+  Container
+  // OfficeCard,
+  // WhatsappButton,
+} from 'components/UI';
 // assets
-import ContactUs from "../images/contact.svg";
+// import ContactUs from "../images/contact.svg";
 
 const contact = () => (
   <Layout>

@@ -1,3 +1,3 @@
-import AboutDestination from "./AboutDestination";
+import AboutDestination from './AboutDestination';
 
 export default AboutDestination;

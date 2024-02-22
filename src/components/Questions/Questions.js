@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 // Components
-import { Container } from "../UI";
+import { Container } from '../UI';
 // hooks
-import { QuestionsData } from "../../hooks";
+import { QuestionsData } from '../../hooks';
 
 function Questions() {
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
@@ -28,9 +28,8 @@ function Questions() {
             Questions
           </h2>
           <p className="font-medium text-gray-500 md:text-xl">
-            Here are some frequently asked questions about our Tours from our
-            loving customers. Should you have any other questions, feel free to
-            reach out via the contact form below.
+            Here are some frequently asked questions about our Tours from our loving customers.
+            Should you have any other questions, feel free to reach out via the contact form below.
           </p>
           {/* <StaticImage
             className="rounded-xl object-cover md:hidden md:h-[600px]"
@@ -43,6 +42,7 @@ function Questions() {
               <button
                 className="rounded-lg border-2 p-4 transition-all duration-300 "
                 type="button"
+                aria-label="questions"
                 key={index}
                 onClick={() => {
                   toggleQuestion(index);
@@ -52,15 +52,11 @@ function Questions() {
                   <div className="flex items-center justify-between text-left">
                     <span>{faq.question}</span>
                     <span className=" text-indigo-600 md:text-3xl ">
-                      {activeQuestionIndex === index ? (
-                        <AiFillMinusCircle />
-                      ) : (
-                        <AiFillPlusCircle />
-                      )}
+                      {activeQuestionIndex === index ? <AiFillMinusCircle /> : <AiFillPlusCircle />}
                     </span>
                   </div>
                   <dt className="pt-2 text-left text-base font-medium text-gray-500 ">
-                    {activeQuestionIndex === index ? faq.answer : ""}
+                    {activeQuestionIndex === index ? faq.answer : ''}
                   </dt>
                 </dt>
               </button>

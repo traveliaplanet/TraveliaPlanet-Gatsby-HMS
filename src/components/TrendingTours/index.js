@@ -1,3 +1,3 @@
-import TrendingTours from "./TrendingTours";
+import TrendingTours from './TrendingTours';
 
 export default TrendingTours;
