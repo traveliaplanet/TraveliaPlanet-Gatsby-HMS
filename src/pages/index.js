@@ -19,7 +19,7 @@ function IndexPage({ data }) {
       title: 'We have the best Services.',
       description:
         'Travelia Planet has a team of professionals who have been in the tourism industry for many years and who are extremely determined to provide a different vision for travelling to all clients so that they may experience the best and then return satisfied with our service. Travelia Planet management philosophy is based on the simple concept of delivering the highest quality customer services at the best possible price.',
-      image: `https://res.cloudinary.com/hms-software/image/upload/v1708440997/khunjerab_dh4uhn.jpg`
+      image: `https://res.cloudinary.com/dl3jrszmx/image/authenticated/s--uc1VS51Y--/v1708694951/Travelia%20Planet%20Website%20Assets/khunjerab_m9ikul.jpg`
     }
   ];
   const popularDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.ispopular);

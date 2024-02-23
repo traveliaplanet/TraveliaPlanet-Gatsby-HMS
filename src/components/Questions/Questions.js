@@ -18,7 +18,7 @@ function Questions() {
     <Container id="#questions" className="grid gap-4 md:grid-cols-2 md:gap-24">
       <StaticImage
         className="w-full rounded-md object-cover md:h-[600px]"
-        src="https://res.cloudinary.com/hms-software/image/upload/v1708441161/questions-2519654_lj2rnr.png"
+        src="https://res.cloudinary.com/dl3jrszmx/image/authenticated/s--r_q15TXT--/v1708694938/Travelia%20Planet%20Website%20Assets/Questions_vyrjky.png"
         placeholder="blurred"
         alt="What we Offer"
       />

@@ -1,10 +1,12 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
+
 // components
 import Layout from 'components/Layout';
 import Seo from 'components/SEO';
 import { Container, OfficeCard, WhatsappButton } from 'components/UI';
+// assets
+import ContactUs from '../images/contact.svg';
 
 const contact = () => (
   <Layout>
@@ -69,7 +71,7 @@ const contact = () => (
               cols="4"
               rows="4"
               required
-            ></textarea>
+            />
             <button
               type="submit"
               className="w-full rounded bg-indigo-600 p-4 text-center text-lg font-semibold text-gray-100 transition duration-300 hover:bg-indigo-500"
@@ -79,7 +81,7 @@ const contact = () => (
             <WhatsappButton text="Whatsapp Us" />
           </form>
         </div>
-        <StaticImage src="https://res.cloudinary.com/hms-software/image/upload/v1708441146/contact_wptkas.svg" alt="Contact Us" />
+        <img src={ContactUs} alt="Contact Us" />
       </div>
     </Container>
 
@@ -113,7 +115,7 @@ export function Head() {
     <Seo title="Contact Us">
       <meta
         property="og:image"
-        content="https://traveliaplanet.com/static/home-210451c84a308ebfd6aacb3623c135ed.jpg"
+        // content="https://traveliaplanet.com/static/home-210451c84a308ebfd6aacb3623c135ed.jpg"
       />
     </Seo>
   );

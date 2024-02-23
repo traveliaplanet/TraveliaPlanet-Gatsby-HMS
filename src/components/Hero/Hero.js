@@ -31,7 +31,7 @@ function Hero() {
         </div>
       </div>
       <StaticImage
-        src="https://res.cloudinary.com/hms-software/image/upload/v1708441153/home_kgo0qr.jpg"
+        src="https://res.cloudinary.com/dl3jrszmx/image/authenticated/s--qaTEZcTZ--/v1708694953/Travelia%20Planet%20Website%20Assets/home_c2h5il.jpg"
         alt="Home"
         placeholder="blurred"
         className="h-[600px] object-cover"
