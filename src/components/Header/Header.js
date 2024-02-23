@@ -42,7 +42,7 @@ function Header() {
       <div className="flex items-center justify-between font-bold">
         <StaticImage
           placeholder="blurred"
-          src="https://res.cloudinary.com/hms-software/image/upload/v1708443469/Travelia_without_bg_logo_ylswzk.png"
+          src="https://res.cloudinary.com/dl3jrszmx/image/authenticated/s--wpzVYDfa--/v1708695091/Travelia%20Planet%20Website%20Assets/Travelia_without_bg_logo_jdhlvo.png"
           alt="Travelia Planet Logo"
           className="max-h-[80px] max-w-[80px]"
         />
