@@ -55,9 +55,9 @@ function AboutDestination({
       </div>
       <div className="grid place-items-start place-content-center">
         <h2 className='mb-4'>Tour Plan</h2>
-        <pre className="mb-10  md:max-w-full max-w-80 whitespace-pre text-wrap text-gray-500 md:text-lg">
+        <p className="mb-10 md:max-w-full max-w-80 whitespace-pre text-wrap">
           {tourPlan}
-        </pre>
+        </p>
         <Link to="/contact/">
           <PrimaryButton text="Book Now" className="md:w-52" />
         </Link>
