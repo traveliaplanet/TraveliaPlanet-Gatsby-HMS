@@ -53,7 +53,7 @@ function AboutDestination({
           </h1>
           <h4 className='mb-8'>{shortDescription}</h4>
           <h2>Tour Plan</h2>
-          <pre className="mb-10 w-full text-pretty text-start font-medium text-gray-500 md:text-lg">
+          <pre className="mb-10 whitespace-pre w-full text-pretty text-start font-medium text-gray-500 md:text-lg">
             {tourPlan}
           </pre>
           <Link to="/contact/">
