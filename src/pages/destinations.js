@@ -23,9 +23,7 @@ function destinations({ data }) {
               Explore the <span className="text-indigo-600">beauty of Pakistan</span> with us.
             </h1>
             <h4>
-              Travelia Planet is one of the pioneer travel companies in Pakistan which holds a valid
-              license from Securities and Exchange Commission of Pakistan (SECP) Under
-              Identification number 0205944
+            Choose Travelia Planet for an unparalleled adventure in Northern Pakistan, where every moment is crafted to perfection. Whether you're seeking thrilling landscapes, cultural richness, or adventure rides, Travelia Planet is your key to unlocking the treasures of this captivating region. Let your journey begin with us!
             </h4>
           </div>
         </div>
@@ -38,9 +36,7 @@ function destinations({ data }) {
               Explore the <span className="text-indigo-600">World</span> with us.
             </h1>
             <h4 className="">
-              Travelia Planet is one of the pioneer travel companies in Pakistan which holds a valid
-              license from Securities and Exchange Commission of Pakistan (SECP) Under
-              Identification number 0205944
+            Our experienced team at Travelia Planet understands that every traveler is unique. That's why we offer customizable itineraries, ensuring your journey reflects your preferences and interests. Whether you're an adventure seeker, a culture enthusiast, or a nature lover, our tours cater to all.
             </h4>
           </div>
         </div>

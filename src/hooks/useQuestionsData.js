@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 const useQuestionsData = () => {
-const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       allDatoCmsFaq(sort: { meta: { updatedAt: DESC } }) {
         nodes {
@@ -13,4 +13,4 @@ const data = useStaticQuery(graphql`
   `);
   return data.allDatoCmsFaq.nodes;
 };
-export default useQuestionsData
+export default useQuestionsData;

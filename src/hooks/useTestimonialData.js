@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const useTestimonialData = () => {
   const data = useStaticQuery(graphql`
     query {
-      allDatoCmsTestimonial (sort: { meta: { updatedAt: ASC } }){
+      allDatoCmsTestimonial(sort: { meta: { updatedAt: ASC } }) {
         nodes {
           name
           designation

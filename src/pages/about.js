@@ -15,7 +15,7 @@ const aboutData = [
     heading: 'Explore the beauty of Pakistan with us.',
     subHeading: 'ABOUT TRAVELIA PLANET SMC PVT LTD',
     description:
-      'Travelia Planet is one the pioneer travel companies in Pakistan which holds a valid license from Securities and Exchange Commission of Pakistan (SECP) Under Identification number 0205944',
+      'Travelia Planet is one the pioneer travel companies in Pakistan which holds a valid license from Securities and Exchange Commission of Pakistan (SECP) Under Identification number 0205944 and International Air Transport Association (IATA) under License Number: 27348591',
     buttonText: 'Explore Destinations',
     link: 'destinations'
   },

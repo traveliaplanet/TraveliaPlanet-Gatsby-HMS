@@ -6,10 +6,9 @@ import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { Container } from '../UI';
 
 // hooks
-import {useQuestionsData} from "../../hooks"
+import { useQuestionsData } from '../../hooks';
 
 function Questions() {
- 
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
 
   const toggleQuestion = (questionIndex) => {
