@@ -10,7 +10,8 @@ import Team from 'components/Team';
 
 const aboutData = [
   {
-    image: 'https://res.cloudinary.com/dl3jrszmx/image/authenticated/s--vO6gjX4O--/v1708694942/Travelia%20Planet%20Website%20Assets/mapAbout_odd7ub.jpg',
+    image:
+      'https://res.cloudinary.com/dl3jrszmx/image/authenticated/s--vO6gjX4O--/v1708694942/Travelia%20Planet%20Website%20Assets/mapAbout_odd7ub.jpg',
     heading: 'Explore the beauty of Pakistan with us.',
     subHeading: 'ABOUT TRAVELIA PLANET SMC PVT LTD',
     description:

@@ -11,20 +11,20 @@ import { SocialLinks } from '../hooks';
 
 const thanks = () => (
   <Layout>
-    <section id='#thank-you' className="grid gap-4 text-center place-items-center py-[200px] px-4">
-    <h1 className='text-5xl lg:text-7xl font-medium'>THANK YOU</h1>
-    <h2 className='mb-16'>for getting in touch with us</h2>
-    <Link to="/">
-              <PrimaryButton text="Back to Home" className="px-8 py-2"  />
-            </Link>
-    <div className="flex">
+    <section id="#thank-you" className="grid place-items-center gap-4 px-4 py-[200px] text-center">
+      <h1 className="text-5xl font-medium lg:text-7xl">THANK YOU</h1>
+      <h2 className="mb-16">for getting in touch with us</h2>
+      <Link to="/">
+        <PrimaryButton text="Back to Home" className="px-8 py-2" />
+      </Link>
+      <div className="flex">
         {SocialLinks.map((link, index) => (
           <PrimaryLink
             key={index}
             target="_blank"
             route={link.route}
             component={link.component}
-            className={`${SocialLinks.length - 1 === index ? '' : 'mr-6'} text-gray-600 hover:text-indigo-600 text-[32px] border-none`}
+            className={`${SocialLinks.length - 1 === index ? '' : 'mr-6'} border-none text-[32px] text-gray-600 hover:text-indigo-600`}
           />
         ))}
       </div>

@@ -35,8 +35,8 @@ function Header() {
     <header
       className={`z-100 flex h-[110px] w-full items-center justify-between px-6 py-4 md:p-6 lg:px-16 ${
         sticky
-          ? 'shadow-sticky fixed z-[9999] bg-slate-50 !bg-opacity-90 backdrop-blur-sm transition'
-          : 'fixed z-[9999] bg-transparent '
+          ? 'shadow-sticky fixed z-[9999] bg-white !bg-opacity-90 backdrop-blur-sm transition'
+          : 'fixed z-[9999] bg-inherit '
       }`}
     >
       <div className="flex items-center justify-between font-bold">
