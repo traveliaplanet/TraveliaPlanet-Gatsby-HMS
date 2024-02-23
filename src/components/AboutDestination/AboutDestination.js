@@ -53,9 +53,9 @@ function AboutDestination({
           <h4 className="mb-8">{shortDescription}</h4>
         </div>
       </div>
-      <div className="grid gap-4">
-        <h2>Tour Plan</h2>
-        <pre className="mb-10 w-full whitespace-pre text-pretty text-start font-medium text-gray-500 md:text-lg">
+      <div className="block">
+        <h2 className='mb-4'>Tour Plan</h2>
+        <pre className="mb-10 w-full whitespace-pre text-wrap text-gray-500 md:text-lg">
           {tourPlan}
         </pre>
         <Link to="/contact/">
