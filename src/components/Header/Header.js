@@ -36,7 +36,7 @@ function Header() {
       className={`z-100 flex h-[110px] w-full items-center justify-between px-6 py-4 md:p-6 lg:px-16 ${
         sticky
           ? 'shadow-sticky fixed z-[9999] bg-white !bg-opacity-90 backdrop-blur-sm transition'
-          : 'fixed z-[9999] bg-inherit '
+          : 'fixed z-[9999] bg-white !bg-opacity-60 backdrop-blur-sm transition'
       }`}
     >
       <div className="flex items-center justify-between font-bold">
