@@ -1,7 +1,7 @@
 const TeamData = [
   {
     image: 'https://res.cloudinary.com/hms-software/image/upload/v1708450048/Bhaiya_cpvu83.jpg',
-    title: 'Chief Executive Office',
+    title: 'Chief Executive Officer',
     name: 'Sohail Murtaza Shah',
     twitter: '/contact',
     facebook: '/contact',

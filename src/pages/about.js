@@ -4,7 +4,6 @@ import React from 'react';
 // components
 import Layout from 'components/Layout';
 import Seo from 'components/SEO';
-import { Container } from 'components/UI';
 import Offers from 'components/Offers';
 import Services from 'components/Services';
 import Team from 'components/Team';
@@ -32,7 +31,7 @@ const aboutData = [
 ];
 const about = () => (
   <Layout>
-    <section className='pt-[110px]'>
+    <section className="pt-[110px]">
       <Offers
         imgRight
         image={aboutData[0].image}
@@ -57,7 +56,7 @@ const about = () => (
       />
       <Services heading="We follow these." subHeading="OUR VALUES" showValues />
       <Team heading="Meet these Fine Folks." subHeading="Our Team" />
-      </section>
+    </section>
   </Layout>
 );
 export function Head() {

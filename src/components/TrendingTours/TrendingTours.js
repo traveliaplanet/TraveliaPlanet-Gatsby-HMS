@@ -33,48 +33,46 @@ function TrendingTours({ destinations }) {
   };
 
   return (
-      <Container id="trendingTours" className='pb-12'>
-        <div className="gap-x-24 md:grid md:grid-cols-2">
-          <div className="mx-auto text-justify">
-            <div className="md:pb-16 pb-4 md:flex md:justify-between">
-              <h1 className="">
-                Trending Tours
-              </h1>
-              <div className="hidden justify-end md:flex">
-                <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
-                <SlideRight onClick={sliderRef?.slickNext} />
-              </div>
-            </div>
-            <h4>
-              Pakistan is so geographically varied that every adventure travel lover in the world
-              would love to take Pakistan tour at least once in their lifetime. From lush green
-              valleys to Cold deserts, unexplored beaches to the second highest Mountain in the
-              world, from Gilgit Baltistan of North to Ziarat of Baluchistan. Pakistan is blessed
-              with natural landscapes; each one more beautiful than the other.
-            </h4>
-            <div className="flex items-center justify-end py-4 md:hidden">
+    <Container id="trendingTours" className="pb-12">
+      <div className="gap-x-24 md:grid md:grid-cols-2">
+        <div className="mx-auto text-justify">
+          <div className="pb-4 md:flex md:justify-between md:pb-16">
+            <h1 className="">Trending Tours</h1>
+            <div className="hidden justify-end md:flex">
               <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
               <SlideRight onClick={sliderRef?.slickNext} />
             </div>
           </div>
-          <Slider ref={setSliderRef} {...settings}>
-            {destinations.map((trip, index) => (
-              <div key={index}>
-                <SliderCard
-                  heading={trip.heading}
-                  rating={trip.rating}
-                  image={trip?.thumbnail?.gatsbyImageData}
-                  shortDescription={trip.shortdescription}
-                  location={trip.location}
-                  price={trip.price}
-                  slug={trip.slug}
-                  duration={trip.duration}
-                />
-              </div>
-            ))}
-          </Slider>
+          <h4>
+            Pakistan is so geographically varied that every adventure travel lover in the world
+            would love to take Pakistan tour at least once in their lifetime. From lush green
+            valleys to Cold deserts, unexplored beaches to the second highest Mountain in the world,
+            from Gilgit Baltistan of North to Ziarat of Baluchistan. Pakistan is blessed with
+            natural landscapes; each one more beautiful than the other.
+          </h4>
+          <div className="flex items-center justify-end py-4 md:hidden">
+            <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
+            <SlideRight onClick={sliderRef?.slickNext} />
+          </div>
         </div>
-      </Container>
+        <Slider ref={setSliderRef} {...settings}>
+          {destinations.map((trip, index) => (
+            <div key={index}>
+              <SliderCard
+                heading={trip.heading}
+                rating={trip.rating}
+                image={trip?.thumbnail?.gatsbyImageData}
+                shortDescription={trip.shortdescription}
+                location={trip.location}
+                price={trip.price}
+                slug={trip.slug}
+                duration={trip.duration}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </Container>
   );
 }
 

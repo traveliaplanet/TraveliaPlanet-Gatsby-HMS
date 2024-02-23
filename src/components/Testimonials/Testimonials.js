@@ -25,7 +25,7 @@ function Testimonials() {
         settings: {
           slidesToShow: 1
         }
-      },
+      }
 
       // {
       //   breakpoint: 900,
@@ -38,53 +38,49 @@ function Testimonials() {
 
   return (
     <Container id="#testimonials" className="gap-x-24 md:grid md:grid-cols-2">
-        <div>
-          <h1 className="mb-4">
-            Testimonials
-          </h1>
-          <h4>
-            All these travelers help foster an understanding between people, providing a cultural
-            exchange between both hosts and guests and increasing the chances to develop mutual
-            sympathy and understanding towards our country while at the same time reducing their
-            prejudices; an aspect much needed in these times. Here are what some of our amazing
-            customers are saying about our tours.
-          </h4>
-          <Slider ref={setTextSliderRef} asNavFor={sliderRef} {...settings}>
-            {useTestimonialData().map((testimonial, index) => (
-              <div key={index} className="relative mt-12">
-                <blockquote className="mb-4 text-center text-lg leading-tight text-gray-500 lg:text-left lg:text-xl">
-                  <ImQuotesLeft className="-mt-4 mr-1 inline-block h-4 w-4 text-indigo-600" />
-                  {testimonial.quote}
-                  <ImQuotesRight className="-mt-4 mr-1 inline-block h-4 w-4 text-indigo-600" />
-                </blockquote>
-                <div className="grid place-items-center mb-4 gap-4 md:flex md:items-center">
-                  <BsPersonCircle className="mr-1 text-5xl text-yellow-500" />
-                  <div className="grid place-items-center md:place-items-start">
-                    <h2>
-                      {testimonial.name}
-                    </h2>
-                    <p>{testimonial.designation}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-        <Slider ref={setSliderRef} asNavFor={textSliderRef} {...settings}>
+      <div>
+        <h1 className="mb-4">Testimonials</h1>
+        <h4>
+          All these travelers help foster an understanding between people, providing a cultural
+          exchange between both hosts and guests and increasing the chances to develop mutual
+          sympathy and understanding towards our country while at the same time reducing their
+          prejudices; an aspect much needed in these times. Here are what some of our amazing
+          customers are saying about our tours.
+        </h4>
+        <Slider ref={setTextSliderRef} asNavFor={sliderRef} {...settings}>
           {useTestimonialData().map((testimonial, index) => (
-            <div key={index} className="relative rounded border-2 object-none">
-              <GatsbyImage
-                image={testimonial.image.gatsbyImageData}
-                className="h-96 w-full object-cover md:h-[650px]"
-                alt="testimonial"
-              />
-              <div className="absolute bottom-0 right-0 z-10 flex rounded rounded-tl-3xl bg-white px-6 py-2">
-                <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
-                <SlideRight onClick={sliderRef?.slickNext} />
+            <div key={index} className="relative mt-12">
+              <blockquote className="mb-4 text-center text-lg leading-tight text-gray-500 lg:text-left lg:text-xl">
+                <ImQuotesLeft className="-mt-4 mr-1 inline-block h-4 w-4 text-indigo-600" />
+                {testimonial.quote}
+                <ImQuotesRight className="-mt-4 mr-1 inline-block h-4 w-4 text-indigo-600" />
+              </blockquote>
+              <div className="mb-4 grid place-items-center gap-4 md:flex md:items-center">
+                <BsPersonCircle className="mr-1 text-5xl text-yellow-500" />
+                <div className="grid place-items-center md:place-items-start">
+                  <h2>{testimonial.name}</h2>
+                  <p>{testimonial.designation}</p>
+                </div>
               </div>
             </div>
           ))}
         </Slider>
+      </div>
+      <Slider ref={setSliderRef} asNavFor={textSliderRef} {...settings}>
+        {useTestimonialData().map((testimonial, index) => (
+          <div key={index} className="relative rounded border-2 object-none">
+            <GatsbyImage
+              image={testimonial.image.gatsbyImageData}
+              className="h-96 w-full object-cover md:h-[650px]"
+              alt="testimonial"
+            />
+            <div className="absolute bottom-0 right-0 z-10 flex rounded rounded-tl-3xl bg-white px-6 py-2">
+              <SlideLeft onClick={sliderRef?.slickPrev} className="mr-4" />
+              <SlideRight onClick={sliderRef?.slickNext} />
+            </div>
+          </div>
+        ))}
+      </Slider>
     </Container>
   );
 }

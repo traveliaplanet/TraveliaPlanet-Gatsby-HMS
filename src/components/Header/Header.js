@@ -33,7 +33,7 @@ function Header() {
 
   return (
     <header
-      className={`z-100 h-[110px] flex w-full items-center justify-between px-6 py-4 md:p-6 lg:px-16 ${
+      className={`z-100 flex h-[110px] w-full items-center justify-between px-6 py-4 md:p-6 lg:px-16 ${
         sticky
           ? 'shadow-sticky fixed z-[9999] bg-slate-50 !bg-opacity-90 backdrop-blur-sm transition'
           : 'fixed z-[9999] bg-transparent '
@@ -44,9 +44,11 @@ function Header() {
           placeholder="blurred"
           src="https://res.cloudinary.com/hms-software/image/upload/v1708443469/Travelia_without_bg_logo_ylswzk.png"
           alt="Travelia Planet Logo"
-          className='max-h-[80px] max-w-[80px]'
+          className="max-h-[80px] max-w-[80px]"
         />
-        <h1 className={`w-full cursor-pointer pl-4 text-xl transition duration-300 hover:text-indigo-600 md:ml-4 md:text-3xl ${sticky ? 'text-indigo-600': 'text-gray-700'}`}>
+        <h1
+          className={`w-full cursor-pointer pl-4 text-xl transition duration-300 hover:text-indigo-600 md:ml-4 md:text-2xl ${sticky ? 'text-indigo-600' : 'text-gray-700'}`}
+        >
           <Link to="/">Travelia Planet</Link>
         </h1>
       </div>
@@ -62,7 +64,7 @@ function Header() {
           toggleButton ? 'absolute left-0 top-0 z-10 w-full border-2 bg-white' : 'hidden '
         }`}
       >
-        <ul className="text-md grid md:grid-flow-col place-content-center place-items-center font-semibold text-gray-700">
+        <ul className="text-md grid place-content-center place-items-center font-semibold text-gray-700 md:grid-flow-col">
           {HeaderLinks.map((link, index) => (
             <li key={index}>
               <PrimaryLink

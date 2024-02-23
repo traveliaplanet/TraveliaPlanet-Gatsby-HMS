@@ -15,18 +15,18 @@ function destinations({ data }) {
   const pakistanDestinations = data.allDatoCmsDestination.nodes.filter((i) => i.ispakistani);
   return (
     <Layout>
-      <section className='pt-[110px]'>
-        <div className="flex flex-col items-center justify-center py-16 text-center">
-          <div className="md:w-1/2">
-            <h3 className="mb-4 text-2xl font-semibold text-indigo-600">All Destinations</h3>
-            <h2 className="mb-8 text-4xl font-extrabold text-gray-700 md:text-5xl">
+      <Container id="destinations">
+        <div className="flex flex-col items-center justify-center pt-[110px] text-center">
+          <div className="lg:w-1/2">
+            <h2 className="mb-4">All Destinations</h2>
+            <h1 className="mb-4">
               Explore the <span className="text-indigo-600">beauty of Pakistan</span> with us.
-            </h2>
-            <p className="font-medium text-gray-500 md:text-xl">
+            </h1>
+            <h4>
               Travelia Planet is one of the pioneer travel companies in Pakistan which holds a valid
               license from Securities and Exchange Commission of Pakistan (SECP) Under
               Identification number 0205944
-            </p>
+            </h4>
           </div>
         </div>
         <article>
@@ -34,20 +34,20 @@ function destinations({ data }) {
         </article>
         <div className="flex flex-col items-center justify-center py-16 text-center">
           <div className="md:w-1/2">
-            <h2 className="mb-8 text-4xl font-extrabold text-gray-700 md:text-5xl">
+            <h1 className="mb-4">
               Explore the <span className="text-indigo-600">World</span> with us.
-            </h2>
-            <p className="font-medium text-gray-500 md:text-xl">
+            </h1>
+            <h4 className="">
               Travelia Planet is one of the pioneer travel companies in Pakistan which holds a valid
               license from Securities and Exchange Commission of Pakistan (SECP) Under
               Identification number 0205944
-            </p>
+            </h4>
           </div>
         </div>
         <article>
           <AllDestinations heading="International Tours" destinations={internationalDestinations} />
         </article>
-      </section>
+      </Container>
     </Layout>
   );
 }

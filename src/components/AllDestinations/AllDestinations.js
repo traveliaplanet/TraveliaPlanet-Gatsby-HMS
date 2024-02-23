@@ -33,7 +33,7 @@ function AllDestinations({ destinations, heading }) {
   };
 
   return (
-    <Container id="allDestinations" className='pb-12'>
+    <Container id="allDestinations" className="pb-12">
       <div className="md:flex md:justify-between md:pb-16">
         <h1 className="mb-4 md:mb-0">{heading}</h1>
         <div className="flex justify-end">

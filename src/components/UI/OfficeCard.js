@@ -3,23 +3,35 @@ import React from 'react';
 
 // Components
 import { Container } from './index';
+import { Link } from 'gatsby';
 
 function OfficeCard({ province, country, street, houseNo, city, email, phone }) {
   return (
-    <Container className="mb-10 max-w-[400px]">
-      <div className="rounded-md border-2 p-6">
-        <h2 className="mb-3 text-2xl font-bold text-gray-700 md:text-3xl">
+    <Container className="max-w-[450px]">
+      <div className="grid rounded-md border-2 p-4">
+        <h2 className="mb-4 text-3xl">
           {province}, {country}
         </h2>
-        <div className="mb-4 text-lg font-semibold text-gray-500 md:text-base">
-          <h3>{street}</h3>
-          <h3>
-            {houseNo}, {city}
-          </h3>
-        </div>
-        <div className="mb-4 text-lg font-semibold text-gray-400 md:text-base">
-          <p>{email}</p>
-          <p>{phone}</p>
+        <h3>{street}</h3>
+        <h3>
+          {houseNo}, {city}
+        </h3>
+        <div>
+          <p>
+            {' '}
+            <Link
+              className="hover:text-indigo-600"
+              to="mailto:traveliaplanet@gmail.com"
+              target="_blank"
+            >
+              {email}
+            </Link>{' '}
+          </p>
+          <p className="hover:text-indigo-600">
+            <Link to={`https://wa.me/${phone}`} target="_blank">
+              {phone}
+            </Link>
+          </p>
         </div>
       </div>
     </Container>

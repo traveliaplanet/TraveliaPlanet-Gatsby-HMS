@@ -18,49 +18,45 @@ function Offers({
   link
 }) {
   return (
-    <Container id='offers' className="md:gap-24 gap-4 grid md:grid-cols-2">
-        {imgLeft && (
-          <img
-            className="w-full rounded-md object-cover md:h-[600px]"
-            src={image}
-            placeholder="blurred"
-            alt="What we Offer"
-          />
-        )}
-        <div className="md:grid place-items-start place-content-start md:text-left">
-          <div>
-            {subHeading && (
-              <h2 className="mb-4">{subHeading}</h2>
-            )}
-            <h1 className="mb-4">
-              {heading}
-            </h1>
-            <h4 className="mb-4 ">{description}</h4>
-          </div>
-          <div>
-            {showLinks && (
-              <ul className="grid grid-cols-2 gap-4 text-lg font-bold text-indigo-600">
-                <li>Tour Guide</li>
-                <li>Luxury Transport</li>
-                <li>All Facilities regarding the stay</li>
-                <li>Sightseeing Places Visit</li>
-              </ul>
-            )}
-            {showButton && (
-              <Link to={`/${link}`}>
-                <PrimaryButton text={buttonText}/>
-              </Link>
-            )}
-          </div>
+    <Container id="offers" className="grid gap-4 md:grid-cols-2 md:gap-24">
+      {imgLeft && (
+        <img
+          className="h-full w-full rounded-md object-cover"
+          src={image}
+          placeholder="blurred"
+          alt="What we Offer"
+        />
+      )}
+      <div className="grid place-content-start place-items-start md:text-left">
+        <div>
+          {subHeading && <h2 className="mb-4">{subHeading}</h2>}
+          <h1 className="mb-4">{heading}</h1>
+          <h4 className="mb-4 ">{description}</h4>
         </div>
-        {imgRight && (
-          <img
-            className="w-full rounded-md object-cover md:h-[600px]"
-            src={image}
-            placeholder="blurred"
-            alt="What we Offer"
-          />
-        )}
+        <div>
+          {showLinks && (
+            <ul className="grid grid-cols-2 gap-4 text-lg font-bold text-indigo-600">
+              <li>Tour Guide</li>
+              <li>Luxury Transport</li>
+              <li>All Facilities regarding the stay</li>
+              <li>Sightseeing Places Visit</li>
+            </ul>
+          )}
+          {showButton && (
+            <Link to={`/${link}`}>
+              <PrimaryButton text={buttonText} />
+            </Link>
+          )}
+        </div>
+      </div>
+      {imgRight && (
+        <img
+          className="h-full w-full rounded-md object-cover"
+          src={image}
+          placeholder="blurred"
+          alt="What we Offer"
+        />
+      )}
     </Container>
   );
 }

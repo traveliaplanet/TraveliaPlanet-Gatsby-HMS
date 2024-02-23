@@ -18,6 +18,7 @@ export const query = graphql`
       price
       rating
       tourPlan
+      slug
       shortdescription
       thumbnail {
         gatsbyImageData
@@ -30,27 +31,27 @@ function DestinationPost({ data }) {
   const datoCmsData = data.datoCmsDestination;
   return (
     <Layout>
-      <section className='pt-[110px]'>
-      <div className="relative flex items-center justify-center ">
-        <GatsbyImage
-          image={datoCmsData.thumbnail?.gatsbyImageData}
-          alt={datoCmsData.heading}
-          className="h-96 w-full object-cover"
+      <section id={`#${datoCmsData.slug}`} className="pt-[110px]">
+        <div className="relative flex items-center justify-center ">
+          <GatsbyImage
+            image={datoCmsData.thumbnail?.gatsbyImageData}
+            alt={datoCmsData.heading}
+            className="h-96 w-full object-cover"
+          />
+          <h2 className="absolute m-auto text-center text-5xl font-bold text-white md:text-7xl">
+            {datoCmsData.heading}
+          </h2>
+        </div>
+        <AboutDestination
+          shortDescription={datoCmsData.shortdescription}
+          Duration={datoCmsData.duration}
+          Price={datoCmsData.price}
+          Location={datoCmsData.location}
+          Heading={datoCmsData.heading}
+          Rating={datoCmsData.rating}
+          tourPlan={datoCmsData.tourPlan}
         />
-        <h2 className="absolute m-auto text-center text-5xl font-bold text-white md:text-7xl">
-          {datoCmsData.heading}
-        </h2>
-      </div>
-      <AboutDestination
-        shortDescription={datoCmsData.shortdescription}
-        Duration={datoCmsData.duration}
-        Price={datoCmsData.price}
-        Location={datoCmsData.location}
-        Heading={datoCmsData.heading}
-        Rating={datoCmsData.rating}
-        tourPlan={datoCmsData.tourPlan}
-      />
-      <Benefits />
+        <Benefits />
       </section>
     </Layout>
   );
@@ -76,6 +77,7 @@ DestinationPost.propTypes = {
   data: PropTypes.object,
   thumbnail: PropTypes.object,
   heading: PropTypes.string,
+  slug: PropTypes.string,
   shortdescription: PropTypes.string,
   duration: PropTypes.number,
   price: PropTypes.number

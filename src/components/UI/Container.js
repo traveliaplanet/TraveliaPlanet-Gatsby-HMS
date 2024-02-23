@@ -3,7 +3,7 @@ import React from 'react';
 
 function Container({ children, className, id }) {
   return (
-    <section id={`#${id}`} className={`"max-w-[1480px] mx-auto p-4 md:p-4 lg:p-16 ${className}`}>
+    <section id={`#${id}`} className={`"max-w-[1480px] mx-auto p-4 md:p-8 lg:p-16 ${className}`}>
       {children}
     </section>
   );
