@@ -15,6 +15,7 @@ export const query = graphql`
       duration
       heading
       location
+      departure
       price
       rating
       tourPlan
@@ -48,6 +49,7 @@ function DestinationPost({ data }) {
           Price={datoCmsData.price}
           Location={datoCmsData.location}
           Heading={datoCmsData.heading}
+          Departure={datoCmsData.departure}
           Rating={datoCmsData.rating}
           tourPlan={datoCmsData.tourPlan}
         />
