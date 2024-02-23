@@ -53,11 +53,9 @@ function AboutDestination({
           <h4 className="mb-8">{shortDescription}</h4>
         </div>
       </div>
-      <div className="grid place-items-start place-content-center">
-        <h2 className='mb-4'>Tour Plan</h2>
-        <p className="mb-10 md:max-w-full max-w-80 whitespace-pre text-wrap">
-          {tourPlan}
-        </p>
+      <div className="grid place-content-center place-items-start">
+        <h2 className="mb-4">Tour Plan</h2>
+        <p className="mb-10 max-w-80 whitespace-pre text-wrap md:max-w-full">{tourPlan}</p>
         <Link to="/contact/">
           <PrimaryButton text="Book Now" className="md:w-52" />
         </Link>

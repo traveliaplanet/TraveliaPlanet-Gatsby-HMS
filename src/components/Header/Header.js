@@ -61,7 +61,7 @@ function Header() {
       </button>
       <nav
         className={`rounded-md md:block  ${
-          toggleButton ? 'absolute left-0 top-0 z-10 w-full py-16 border-2 bg-white' : 'hidden '
+          toggleButton ? 'absolute left-0 top-0 z-10 w-full border-2 bg-white py-16' : 'hidden '
         }`}
       >
         <ul className="text-md grid place-content-center place-items-center font-semibold text-gray-700 md:grid-flow-col">

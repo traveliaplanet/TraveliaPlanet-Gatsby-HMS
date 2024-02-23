@@ -41,11 +41,9 @@ function Testimonials() {
       <div>
         <h1 className="mb-4">Testimonials</h1>
         <h4>
-          All these travelers help foster an understanding between people, providing a cultural
-          exchange between both hosts and guests and increasing the chances to develop mutual
-          sympathy and understanding towards our country while at the same time reducing their
-          prejudices; an aspect much needed in these times. Here are what some of our amazing
-          customers are saying about our tours.
+          Hear the stories of those who have explored Northern Pakistan with Travelia Planet. Read
+          glowing testimonials from satisfied travelers who have experienced the magic of our tours
+          and appreciated our reliable visa services.
         </h4>
         <Slider ref={setTextSliderRef} asNavFor={sliderRef} {...settings}>
           {useTestimonialData().map((testimonial, index) => (

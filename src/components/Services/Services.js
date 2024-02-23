@@ -38,7 +38,6 @@ function Services({ heading, subHeading, showValues }) {
               title={service.title}
               description={service.description}
               component={service.component}
-              link={service.url}
             />
           ))}
         </div>

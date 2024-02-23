@@ -17,8 +17,10 @@ function Hero() {
             Find Perfect Destinations <span className="text-indigo-600">anywhere you go.</span>
           </h1>
           <h4 className="mb-4">
-            Travelia Planet offers best North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu
-            Tours, Gilgit Baltistan Tours and many more with attractive discounts.
+            Embark on an unforgettable journey with Travelia Planet. Your gateway to the enchanting
+            beauty of Pakistan. Our expertly crafted tours promise awe-inspiring landscapes, rich
+            cultural experiences, and hassle-free Visa services. Discover Pakistan with Travelia
+            Planet as your trusted travel companion.
           </h4>
           <div className="grid w-full gap-4 md:grid-cols-2">
             <Link to="/destinations/">

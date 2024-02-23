@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 // Components
 import { Container } from '../UI';
-// hooks
-import { QuestionsData } from '../../hooks';
 
 function Questions() {
+  const data = useStaticQuery(graphql`
+    query {
+      allDatoCmsFaq(sort: { meta: { publishedAt: ASC } }) {
+        nodes {
+          answer
+          question
+        }
+      }
+    }
+  `);
+  console.log('data is', data);
+
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
 
   const toggleQuestion = (questionIndex) => {
@@ -29,9 +40,9 @@ function Questions() {
           you have any other questions, feel free to reach out via the contact form below.
         </h4>
         <dl className="grid w-full gap-2">
-          {QuestionsData.map((faq, index) => (
+          {data.allDatoCmsFaq.nodes.map((faq, index) => (
             <button
-              className={`${activeQuestionIndex === index ? 'border-indigo-600' : ''} rounded-md border-2 p-4 transition-all duration-300 hover:border-indigo-600`}
+              className={`${activeQuestionIndex === index ? 'border-indigo-600' : ''} rounded-md border-2 p-2 transition-all duration-300 hover:border-indigo-600`}
               type="button"
               aria-label="questions"
               key={index}

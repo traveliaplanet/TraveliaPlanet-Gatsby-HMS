@@ -1,12 +1,14 @@
 import React from 'react';
 import { RiShieldFlashLine } from 'react-icons/ri';
 import { MdOutlineSupportAgent, MdOutlineDashboardCustomize } from 'react-icons/md';
+import { TbBrandVisa } from 'react-icons/tb';
 
 const ServiceLinks = [
   {
     component: <RiShieldFlashLine />,
     title: 'Secure',
-    description: 'We strictly only deal with Travel Agents that provide top notch security.',
+    description:
+      'Your safety and comfort are our top priorities. Travel with confidence, knowing that Travelia Planet prioritizes high standards of safety and partners with reputable accommodations and transportation services to make your journey comfortable and worry-free.',
     url: '/contact/'
   },
   {
@@ -24,9 +26,10 @@ const ServiceLinks = [
     url: '/destinations/'
   },
   {
-    component: <MdOutlineDashboardCustomize />,
+    component: <TbBrandVisa />,
     title: 'Visa Services',
-    description: 'We will provide you Visa Services',
+    description:
+      "Say goodbye to visa-related stress with Travelia Planet's streamlined visa services. Our dedicated team takes care of the entire process",
     url: '/visa/'
   }
 ];
