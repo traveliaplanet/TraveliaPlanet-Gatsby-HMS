@@ -60,8 +60,8 @@ function Header() {
         {toggleButton ? <ImCross /> : <FaBars />}
       </button>
       <nav
-        className={`rounded-lg md:block  ${
-          toggleButton ? 'absolute left-0 top-0 z-10 w-full border-2 bg-white' : 'hidden '
+        className={`rounded-md md:block  ${
+          toggleButton ? 'absolute left-0 top-0 z-10 w-full py-16 border-2 bg-white' : 'hidden '
         }`}
       >
         <ul className="text-md grid place-content-center place-items-center font-semibold text-gray-700 md:grid-flow-col">
