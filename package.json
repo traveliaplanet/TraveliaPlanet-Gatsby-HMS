@@ -3,7 +3,7 @@
   "private": true,
   "description": "Travelia Planet offers best North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu Tours, Gilgit Baltistan Tours and many more with attractive discounts.",
   "version": "0.1.0",
-  "author": "Hussain Shah <hussainmshah@github.com>",
+  "author": "Travelia Planet <traveliaplanet@github.com>",
   "dependencies": {
     "gatsby": "^5.13.3",
     "gatsby-plugin-alias-imports": "^1.0.5",
@@ -56,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hussainmshah/TraveliaPlanet-Gatsby-HMS"
+    "url": "https://github.com/traveliaplanet/TraveliaPlanet-Gatsby-HMS"
   },
   "bugs": {
-    "url": "https://github.com/hussainmshah/TraveliaPlanet-Gatsby-HMS/issues"
+    "url": "https://github.com/traveliaplanet/TraveliaPlanet-Gatsby-HMS/issues"
   }
 }

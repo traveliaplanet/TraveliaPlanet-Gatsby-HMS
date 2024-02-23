@@ -1,11 +1,10 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 // components
 import Layout from 'components/Layout';
 import Seo from 'components/SEO';
 import { Container, OfficeCard, WhatsappButton } from 'components/UI';
-// assets
-import ContactUs from '../images/contact.svg';
-import { Link } from 'gatsby';
 
 const contact = () => (
   <Layout>
@@ -80,7 +79,7 @@ const contact = () => (
             <WhatsappButton text="Whatsapp Us" />
           </form>
         </div>
-        <img src={ContactUs} alt="Contact Us" />
+        <StaticImage src="https://res.cloudinary.com/hms-software/image/upload/v1708441146/contact_wptkas.svg" alt="Contact Us" />
       </div>
     </Container>
 
