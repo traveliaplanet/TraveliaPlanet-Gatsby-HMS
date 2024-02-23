@@ -7,11 +7,11 @@ function PrimaryLink({ route, name, className, component, target }) {
     <Link
       to={route}
       target={target}
-      className={`border-indigo-600 text-lg font-semibold leading-10 tracking-wide transition duration-300 hover:border-b-2 hover:text-indigo-600 ${className}`}
+      className={`border-indigo-600 font-semibold leading-10 tracking-wide transition duration-300 hover:border-b-2 hover:text-indigo-600 ${className} `}
       activeClassName="text-indigo-600"
     >
-      {name}
-      {component}
+      {name && name}
+      {component && component}
     </Link>
   );
 }

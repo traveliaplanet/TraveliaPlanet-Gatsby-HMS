@@ -45,7 +45,7 @@ function Footer() {
             target="_blank"
             route={link.route}
             component={link.component}
-            className={`${SocialLinks.length - 1 === index ? '' : 'mr-6'} border-none text-[35px]`}
+            className={`${SocialLinks.length - 1 === index ? '' : 'mr-6'} border-none text-3xl`}
           />
         ))}
       </div>
