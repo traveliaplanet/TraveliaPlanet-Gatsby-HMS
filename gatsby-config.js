@@ -16,10 +16,10 @@ const importAlias = {
 
 module.exports = {
   siteMetadata: {
-    title: `North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu Tours, Gilgit Baltistan Tours`,
-    description: `Travelia Planet offers best North Tours, Kashmir Tours, Naran & Kaghan Tours, Skardu Tours, Gilgit Baltistan Tours and many more with attractive discounts.`,
-    author: `@hussainmshah`,
-    siteUrl
+    title: `Welcome to Travelia Planet, your gateway to unforgettable travel experiences in Pakistan! Explore the beauty and diversity of this incredible country with our comprehensive travel and tourism services. From awe-inspiring landscapes to rich cultural heritage, we are your trusted partner in discovering the hidden gems of Pakistan`,
+    description: `Travelia Planet! Your go-to destination for seamless travel, tourism, visa services, and ticketing solutions. Uncover the beauty of Pakistan with our expertly crafted itineraries and hassle-free visa processing. Book your flights effortlessly and embark on unforgettable adventures with Travelia Planet – your key to stress-free travel experiences in Pakistan.`,
+    author: `@traveliaplanet`,
+    siteUrl: `https://traveliaplanet.com/`
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -40,11 +40,6 @@ module.exports = {
         name: `Travelia Planet`,
         short_name: `traveliaplanet`,
         start_url: `/`,
-        background_color: `#FFFF`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `fullscreen`,
         icon: `src/images/logo.png` // This path is relative to the root of the site.
       }
     },

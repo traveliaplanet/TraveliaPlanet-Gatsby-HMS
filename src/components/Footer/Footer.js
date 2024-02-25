@@ -50,7 +50,7 @@ function Footer() {
         ))}
       </div>
       <p className="px-4 font-semibold text-gray-500">
-        © Copyright 2022, Travelia Planet SMC PVT LTD. All Rights Reserved.
+        {`  © Copyright ${new Date().getFullYear()}, Travelia Planet SMC PVT LTD. All Rights Reserved.`}
       </p>
     </footer>
   );
