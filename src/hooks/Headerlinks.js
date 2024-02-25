@@ -12,6 +12,10 @@ const HeaderLinks = [
     route: '/destinations/'
   },
   {
+    name: 'Group Tickets',
+    route: '/group-tickets/'
+  },
+  {
     name: 'Contact Us',
     route: '/contact/'
   }

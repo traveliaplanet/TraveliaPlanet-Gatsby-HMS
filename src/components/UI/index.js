@@ -11,6 +11,7 @@ import OfficeCard from './OfficeCard';
 import TeamCard from './TeamCard';
 import BenefitsCard from './BenefitsCard';
 import WhatsappButton from './WhatsappButton';
+import TicketCard from './TicketCard';
 
 export {
   Container,
@@ -25,5 +26,6 @@ export {
   OfficeCard,
   TeamCard,
   BenefitsCard,
-  WhatsappButton
+  WhatsappButton,
+  TicketCard
 };

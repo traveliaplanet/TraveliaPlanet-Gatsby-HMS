@@ -40,7 +40,7 @@ function SliderCard({ heading, shortDescription, rating, location, price, image,
 
       <Link to={`/destinations/${slug}/`}>
         <PrimaryButton
-          text="Book Now"
+          text="Learn More"
           className="rounded-none rounded-bl-[4px] rounded-br-[50px]"
         />
       </Link>
