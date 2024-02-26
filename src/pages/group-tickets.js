@@ -32,11 +32,12 @@ const Groups = () => {
     <Layout>
       <section
         id="#group-tickets"
-        className="grid place-items-center gap-4 px-4 py-[200px] text-center"
+        className="grid w-full gap-4 px-4 lg:px-16 md:px-8 py-[200px] text-center"
       >
+        <div className="grid gap-4 place-content-center place-items-center">
         <h1>GROUP TICKETS</h1>
         <form
-          className="grid w-full cursor-pointer gap-4 text-gray-500 md:w-2/3"
+          className="grid w-full cursor-pointer gap-4 text-gray-500"
           name="contact"
           onSubmit={formSubmitHandler}
         >
@@ -66,13 +67,15 @@ const Groups = () => {
 
           <button
             type="submit"
-            className="w-full rounded bg-indigo-600 p-4 text-center text-lg font-semibold text-gray-100 transition duration-300 hover:bg-indigo-500"
+            className="rounded bg-indigo-600 p-4 text-center text-lg font-semibold text-gray-100 transition duration-300 hover:bg-indigo-500"
           >
             Search
           </button>
-          <WhatsappButton text="Whatsapp Us" />
+          {/* <WhatsappButton text="Whatsapp Us" /> */}
         </form>
-        <div className="grid gap-4 lg:grid-flow-col">
+        </div>
+
+        <div className="grid gap-y-12 w-full">
           {data.map((d, index) => (
             <TicketCard
               key={index}
