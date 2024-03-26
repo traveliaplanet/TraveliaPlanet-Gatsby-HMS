@@ -71,7 +71,7 @@ export function Head({ data }) {
           data.strapiDestination?.url || '/static/home-210451c84a308ebfd6aacb3623c135ed.jpg'
         }`}
       />
-      <meta name="google-adsense-account" content="ca-pub-1582173148473966">
+      <meta name="google-adsense-account" content="ca-pub-1582173148473966" />
     </Seo>
   );
 }
