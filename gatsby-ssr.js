@@ -1,4 +1,4 @@
-import React from "react";
+const React = require("react");
 
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
