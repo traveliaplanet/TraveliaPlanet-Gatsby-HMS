@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 
 // Components
@@ -14,6 +14,15 @@ import Testimonials from 'components/Testimonials';
 import Questions from 'components/Questions';
 
 function IndexPage({ data }) {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.posthog) {
+      window.posthog.capture('homepage_viewed', {
+        url: window.location.href,
+        title: document.title,
+      });
+    }
+  }, []);
+  
   const Offer = [
     {
       title: 'We have the best Services.',
